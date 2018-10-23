@@ -1,0 +1,31 @@
+{
+  "name": "parsecare-api",
+  "version": "1.0.0",
+  "description": "A simple fish forum -API Module",
+  "main": "index.js",
+  "scripts": {
+    "start": "set NODE_ENV=production & node server.js",
+    "start-dev": "set DEBUG=parsecare.* & nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Oscar Uriel",
+  "license": "MIT",
+  "dependencies": {
+    "parsecare-db": "file:../parsecare-db",
+    "chalk": "^2.4.1",
+    "cookie-parser": "^1.4.3",
+    "cors": "^2.8.4",
+    "debug": "^4.1.0",
+    "express": "^4.16.4",
+    "express-asyncify": "^1.0.0",
+    "express-session": "^1.15.6",
+    "express-session-sequelize": "^1.1.0",
+    "morgan": "^1.9.1",
+    "multer": "^1.4.1",
+    "mysql2": "^1.6.1",
+    "sequelize": "^4.41.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.4"
+  }
+}

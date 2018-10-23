@@ -1,11 +1,11 @@
 'use strict'
 
-module.exports = function setupUser (UserModel) {
+module.exports = function setupUser (UserModel, CatRoleModel) {
 
     async function createOrUpdate (user) {
         const cond = {
           where: {
-            email: user.email
+            correo: user.correo
           }
         }
     
@@ -22,7 +22,12 @@ module.exports = function setupUser (UserModel) {
       }
     
       function findAll() {
-        return UserModel.findAll()
+        return UserModel.findAll({
+          include: [{
+            model: CatRoleModel, 
+            as: 'rol'
+          }]
+        })
       }
     
       function findById (id) {
@@ -33,23 +38,43 @@ module.exports = function setupUser (UserModel) {
         return UserModel.findOne({
           where: {
             nickname
-          }
+          },
+          include: [{
+            model: CatRoleModel, 
+            as: 'rol'
+          }]
         })
       }
 
-      function findByEmail (email) {
+      function findByEmail (correo) {
         return UserModel.findOne({
           where: {
-            email
-          }
+            correo
+          },
+          include: [{
+            model: CatRoleModel, 
+            as: 'rol'
+          }]
         })
       }
+
+      function findByRol (rol) {
+        return UserModel.findAll({
+          where: {
+            rols
+          },
+          include: [{
+              model: CatRoleModel,
+              where: { rol: Sequelize.col('usuario.rol') }
+          }]
+      })
+      }
     
-      function deleteUser (email) {
+      function deleteUser (correo) {
         return UserModel.destroy({
           where: {
-            email
-          }
+            correo
+          },
         })
       }
 
@@ -59,6 +84,7 @@ module.exports = function setupUser (UserModel) {
         findById,
         findByNickName,
         findByEmail,
+        findByRol,
         deleteUser
       }
 }
