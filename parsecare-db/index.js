@@ -32,6 +32,11 @@ module.exports = async function (config) {
         {nombre: 'Gerardo', apellidos: 'Ponce Ortega', nickname: 'geponceo', correo: 'd.d@d.d', password: 'megustanlosmemes3', rolId: 2},
         {nombre: 'Juan Manuel', apellidos: 'Cruz Mendoza', nickname: 'Pollo', correo: 'e.e@e.e', password: 'megustanlosmemes4', rolId: 2}
     ])
+    PublicationModel.bulkCreate([
+        {contenido: 'AngelFDFFS', topic: 'INFO 1', archivo: 'tugfa.exe', usuarioId: 1},
+        {contenido: 'AngelADFHGHJ', topic: 'INFO 2', archivo: 'Angelito123.html', usuarioId: 2},
+        {contenido: 'AngelHJKKLUIURTFB', topic: 'INFO 3', archivo: 'Angelito123', usuarioId: 3}
+    ])
 
     await sequelize.authenticate()
 

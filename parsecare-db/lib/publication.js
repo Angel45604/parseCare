@@ -33,7 +33,11 @@ module.exports = function setupPublication (PublicationModel, UserModel) {
         return PublicationModel.findOne({
           where: {
             topic
-          }
+          },
+          include: [{
+            model: UserModel, 
+            as: 'nickname'
+          }]
         })
       }
 
@@ -41,7 +45,11 @@ module.exports = function setupPublication (PublicationModel, UserModel) {
         return PublicationModel.findOne({
           where: {
             createdAt
-          }
+          },
+          include: [{
+            model: UserModel, 
+            as: 'nickname'
+          }]
         })
       }
 
@@ -66,6 +74,7 @@ module.exports = function setupPublication (PublicationModel, UserModel) {
       }
 
       return {
+        findByUser,
         findAll,
         createOrUpdate,
         findById,

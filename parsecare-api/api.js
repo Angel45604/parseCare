@@ -72,6 +72,17 @@ api.get('/users', async (req, res, next) => {
     }
     res.send(users)
 })
+api.get('/publication', async (req, res, next) => {
+
+    let publication = []
+
+    try {
+        publication = await Publication.findAll()
+    } catch(e) {
+        return next(e)
+    }
+    res.send(publication)
+})
 
 api.get('/users/:nickname', async (req, res, next) => {
     debug(`A request has come to /users/${req.params.nickname}`)

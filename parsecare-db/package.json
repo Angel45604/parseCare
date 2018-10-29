@@ -16,9 +16,10 @@
     "inquirer": "^6.2.0",
     "minimist": "^1.2.0",
     "mysql2": "^1.6.1",
+    "npm-update": "^2.1.0",
     "nyc": "^13.1.0",
     "proxyquire": "^2.1.0",
     "sequelize": "^4.41.0",
-    "sinon": "^7.0.0"
+    "sinon": "^7.1.0"
   }
 }
