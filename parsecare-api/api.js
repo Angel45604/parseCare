@@ -73,6 +73,7 @@ api.get('/users', async (req, res, next) => {
     res.send(users)
 })
 api.get('/publication', async (req, res, next) => {
+    debug(`A request has come to /publication/${req.params.nickname}`)
 
     let publication = []
 
@@ -116,6 +117,23 @@ api.post('/users', async (req, res, next) => {
         return next(e)
     }
     res.send(user)
+})
+api.post('/publication', async (req, res, next) => {
+    debug(`A request has come to /publication POST`)
+
+    let publication = {
+        contenido: req.body.contenido,
+        topic: req.body.topic,
+        archivo: req.body.archivo,
+        usuarioId: req.body.usuarioId
+    }
+
+    try {
+        await Publication.createOrUpdate(publication)
+    } catch(e) {
+        return next(e)
+    }
+    res.send(publication)
 })
 
 api.delete('/users', async (req, res, next) => {
