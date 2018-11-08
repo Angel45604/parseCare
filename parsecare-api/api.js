@@ -36,8 +36,8 @@ api.use('*', async (req, res, next) => {
 
 api.get('/ola', async(req, res, next) => {
     debug('A request has come to /ola')
-
-    res.send({mensaje: 'Ola de mar'})
+    console.log(Publication.insertComment({comentario: 'MEGUSTANLOSMEMES'}))
+    res.send(Publication.insertComment({comentario: 'MEGUSTANLOSMEMES'}))
 
 })
 
@@ -135,6 +135,22 @@ api.post('/publication', async (req, res, next) => {
     }
     res.send(publication)
 })
+
+api.post('/publications/comment', async (req, res, next) => {
+    debug(`A request has come to /publications/comment POST`)
+
+    let comment = {
+        comentario: req.body.comentario
+    }
+
+    try {
+        await Publication.insertComment(comment)
+    } catch(e) {
+        return next(e)
+    }
+    res.send(comment)
+})
+
 
 api.delete('/users', async (req, res, next) => {
     debug('A request has come to /users DELETE')

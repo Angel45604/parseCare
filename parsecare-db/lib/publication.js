@@ -73,6 +73,12 @@ module.exports = function setupPublication (PublicationModel, UserModel) {
         })
       }
 
+      function insertComment(comment) {
+        console.log('AYUDA----------------------------------------------------------------------------------')
+        console.log(PublicationModel)
+        return PublicationModel
+      }
+
       return {
         findByUser,
         findAll,
@@ -80,6 +86,7 @@ module.exports = function setupPublication (PublicationModel, UserModel) {
         findById,
         findByTopic,
         findByFecha,
-        deletePublication
+        deletePublication,
+        insertComment
       }
 }

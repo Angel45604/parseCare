@@ -3,10 +3,12 @@
 const setupDatabase = require('./lib/db')
 const setupUserModel = require('./models/user')
 const setupCatRoleModel = require('./models/cat_roles')
+const setupCommentModel = require('./models/comment')
 const setupPublicationModel = require('./models/publication')
 
 const setupUser = require('./lib/user')
 const setupCatRole = require('./lib/cat_roles')
+const setupComment = require('./lib/comment')
 const setupPublication = require('./lib/publication')
 
 
@@ -15,14 +17,27 @@ module.exports = async function (config) {
 
     const UserModel =  setupUserModel(config)
     const CatRoleModel = setupCatRoleModel(config)
+    const CommentModel = setupCommentModel(config)
     const PublicationModel = setupPublicationModel(config)
 
     UserModel.belongsTo(CatRoleModel, {as: 'rol'})
     PublicationModel.belongsTo(UserModel, {as: 'usuario'})
 
+    PublicationModel.hasMany(CommentModel, {
+        foreignKey: 'comentarioId'
+    })
+    CommentModel.belongsTo(PublicationModel, {
+        foreignKey: 'publicacionId'
+    })
+
     CatRoleModel.bulkCreate([
         {rol: 'Usuario'},
         {rol: 'Administrador'}
+    ])
+
+    CommentModel.bulkCreate([
+        {comentario: 'comentario1'},
+        {comentario: 'comentario2'}
     ])
 
     UserModel.bulkCreate([
@@ -46,11 +61,13 @@ module.exports = async function (config) {
 
     const User = setupUser(UserModel, CatRoleModel)
     const Role = setupCatRole(CatRoleModel)
+    const Comment = setupComment(CommentModel, UserModel, PublicationModel)
     const Publication = setupPublication(PublicationModel)
 
     return {
         User,
         Role,
-        Publication
+        Publication,
+        Comment
     }
 }
