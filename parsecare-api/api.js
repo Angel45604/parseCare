@@ -34,10 +34,34 @@ api.use('*', async (req, res, next) => {
     next()
 })
 
+
+//RELACIONES
 api.get('/ola', async(req, res, next) => {
     debug('A request has come to /ola')
-    console.log(Publication.insertComment({comentario: 'MEGUSTANLOSMEMES'}))
-    res.send(Publication.insertComment({comentario: 'MEGUSTANLOSMEMES'}))
+
+    try {
+         await Role.findAll().then(roles=> {
+             let rol = roles[0]
+             rol.createUsuario({
+                 nombre: 'NOMBRE DE LOS MEMAZOS',
+                 apellidos: 'Cruz MEMAZOS',
+                 nickname: 'MEMAZOS',
+                 correo: 'f.f@f.f',
+                 password: 'megustanlosmemes5',
+             }).then(usuario => {
+                 res.send(usuario)
+
+             }, err => {
+                 console.log(err)
+             })
+
+        }, err => {
+             console.error(err)
+         })
+    } catch (e) {
+        return next(e)
+    }
+
 
 })
 

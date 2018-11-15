@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-
+import { Component, OnInit } from '@angular/core';
+import { Publication } from '../models/Publication';
 @Component({
   selector: 'publication-container-component',
   templateUrl: './publication-container.component.html',
@@ -7,5 +7,14 @@ import { Component } from '@angular/core';
 })
 
 export class PublicationContainer {
-  
+  publicaciones: Publication[] = [];
+
+  ngOnInit() {
+    for(let i = 0; i< 5; i++) {
+      this.publicaciones.push(new Publication(`Titulo ${i}`, `contenido ${i}`, `usuario ${i}`, i));
+    }
+    console.log(this.publicaciones);
+
+    
+  }
 }

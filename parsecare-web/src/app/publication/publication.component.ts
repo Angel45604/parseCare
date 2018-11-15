@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Publication } from '../models/Publication';
 
 @Component({
@@ -9,15 +9,19 @@ import { Publication } from '../models/Publication';
 
 export class PublicationComponent {
     
-    publication : Publication;
+  //@Input("publicacionInput") publicacionInput: any;
+  @Input("usuario") usuario : string;
+  @Input("topic") topic : string;
+  @Input("likes") likes : number;
+  @Input("content") content : string;
+    publicacion : Publication;
     isenabled: boolean;
     variable: string;
 
     constructor() {}
     
   ngOnInit() {
-    this.publication  = new Publication('ESTE ES EL TITULO', 'ESTE ES EL CONTENIDO', 'ANGELITO', 1);
-    this.isenabled = false;
+    this.isenabled = true;
     this.variable = 'ola';
   }
 }
