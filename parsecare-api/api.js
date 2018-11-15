@@ -176,7 +176,7 @@ api.post('/publications/comment', async (req, res, next) => {
 })
 
 
-api.delete('/users', async (req, res, next) => {
+api.delete('/users/', async (req, res, next) => {
     debug('A request has come to /users DELETE')
 
     let correo = req.body.correo

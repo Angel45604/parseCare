@@ -1,5 +1,8 @@
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
+import { HttpModule, RequestOptions, Headers } from '@angular/http';
+import { HttpClientModule} from '@angular/common/http';
+
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -12,6 +15,8 @@ import { AppComponent } from './app.component';
 import { PublicationContainer } from './publication-container/publication.component';
 import { PublicationComponent } from './publication/publication.component';
 
+import { UsuarioService } from './services/Usuarios.Service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,14 +26,19 @@ import { PublicationComponent } from './publication/publication.component';
   imports: [
     BrowserModule,
     FormsModule,
-  
+    HttpModule,
+    HttpClientModule,
     //Angular Material
     BrowserAnimationsModule,
     NoopAnimationsModule,
     MatToolbarModule,
-    MatIconModule
+    MatIconModule,
+
+
   ],
-  providers: [],
+  providers: [
+    UsuarioService
+  ],
   bootstrap: [AppComponent]
 })
 

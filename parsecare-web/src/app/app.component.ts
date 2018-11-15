@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import { UsuarioService} from "./services/Usuarios.Service";
 
 @Component({
   selector: 'app-memes',
@@ -6,6 +7,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 
-export class AppComponent {
-  
+export class AppComponent implements OnInit {
+  constructor(private usuarioService: UsuarioService) {}
+
+  usuarios = [];
+
+  ngOnInit() {
+    this.usuarioService.getUsuarios().subscribe(usuarios => {
+      console.log(usuarios);
+      this.usuarios = usuarios;
+    }, err => {
+      console.error(err);
+    });
+  }
 }
