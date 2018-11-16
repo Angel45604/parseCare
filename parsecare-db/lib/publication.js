@@ -22,7 +22,12 @@ module.exports = function setupPublication (PublicationModel, UserModel) {
       }
     
       function findAll() {
-        return PublicationModel.findAll()
+        return PublicationModel.findAll({
+          include: [{
+            model: UserModel, 
+            as: 'nickname'
+          }]
+        })
       }
     
       function findById (id) {

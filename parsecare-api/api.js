@@ -86,7 +86,7 @@ api.get('/roles', async (req, res, next) => {
 })
 
 api.get('/users', async (req, res, next) => {
-
+    debug('A request has come to /users')
     let users = []
 
     try {

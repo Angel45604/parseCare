@@ -32,8 +32,16 @@ module.exports = async function (config) {
         constraints: true,
         as: 'rol'
     });
-
-
+    //publication-usuario 1:n publication.usuarioId
+    UserModel.hasMany(PublicationModel, {
+        foreignKey: 'usuarioId',
+        constraints: true
+    });
+    PublicationModel.belongsTo(UserModel, {
+        foreignKey: 'usuarioId',
+        constraints: true
+    });
+    
     CatRoleModel.bulkCreate([
         {rol: 'Usuario'},
         {rol: 'Administrador'}
