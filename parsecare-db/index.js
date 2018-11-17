@@ -41,6 +41,24 @@ module.exports = async function (config) {
         foreignKey: 'usuarioId',
         constraints: true
     });
+    //comment-usuario 1:n comment.usuarioId
+    UserModel.hasMany(CommentModel, {
+        foreignKey: 'usuarioId',
+        constraints: true
+    });
+    CommentModel.belongsTo(UserModel, {
+        foreignKey: 'usuarioId',
+        constraints: true
+    });
+    //comment-publication 1:n comment.publicationId
+    PublicationModel.hasMany(CommentModel, {
+        foreignKey: 'publicationId',
+        constraints: true
+    });
+    CommentModel.belongsTo(PublicationModel, {
+        foreignKey: 'publicationId',
+        constraints: true
+    });
     
     CatRoleModel.bulkCreate([
         {rol: 'Usuario'},
@@ -74,7 +92,7 @@ module.exports = async function (config) {
     const User = setupUser(UserModel, CatRoleModel)
     const Role = setupCatRole(CatRoleModel)
     const Comment = setupComment(CommentModel, UserModel, PublicationModel)
-    const Publication = setupPublication(PublicationModel)
+    const Publication = setupPublication(PublicationModel, UserModel, CommentModel)
 
     return {
         User,
