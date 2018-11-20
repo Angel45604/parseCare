@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+/*import { Component, OnInit } from '@angular/core';
 import { Publication } from '../models/Publication';
 @Component({
   selector: 'publication-container-component',
@@ -17,4 +17,4 @@ export class PublicationContainer {
 
     
   }
-}
+} */

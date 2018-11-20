@@ -12,16 +12,17 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
-import { PublicationContainer } from './publication-container/publication.component';
-import { PublicationComponent } from './publication/publication.component';
+//import { PublicationContainer } from './publication-container/publication.component';
+//import { PublicationComponent } from './publication/publication.component';
 
 import { UsuarioService } from './services/Usuarios.Service';
+import { PublicacionService } from './services/Publicaciones.Service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PublicationContainer,
-    PublicationComponent
+    //PublicationContainer,
+    //PublicationComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +38,8 @@ import { UsuarioService } from './services/Usuarios.Service';
 
   ],
   providers: [
-    UsuarioService
+    UsuarioService,
+    PublicacionService
   ],
   bootstrap: [AppComponent]
 })

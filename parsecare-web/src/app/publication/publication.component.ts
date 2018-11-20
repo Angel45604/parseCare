@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+/*import { Component, OnInit, Input } from '@angular/core';
 import { Publication } from '../models/Publication';
 
 @Component({
@@ -7,9 +7,9 @@ import { Publication } from '../models/Publication';
   styleUrls: ['./publication.component.css']
 })
 
-export class PublicationComponent {
+//export class PublicationComponent {
     
-  //@Input("publicacionInput") publicacionInput: any;
+  @Input("publicacionInput") publicacionInput: any;
   @Input("usuario") usuario : string;
   @Input("topic") topic : string;
   @Input("likes") likes : number;
@@ -25,3 +25,4 @@ export class PublicationComponent {
     this.variable = 'ola';
   }
 }
+*/

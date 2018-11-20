@@ -16,7 +16,7 @@ api.use(morgan('dev'))
 api.use(bodyParser.urlencoded({extended: true}))
 api.use(bodyParser.json())
 
-let services, User, Publication, Role
+let services, User,Comment, Publication, Role
 
 api.use('*', async (req, res, next) => {
     if (!services) {
@@ -30,6 +30,7 @@ api.use('*', async (req, res, next) => {
         User = services.User
         Publication = services.Publication
         Role = services.Role
+        Comment = services.Comment
     }
     next()
 })
@@ -97,7 +98,7 @@ api.get('/users', async (req, res, next) => {
     res.send(users)
 })
 api.get('/publication', async (req, res, next) => {
-    debug(`A request has come to /publication/${req.params.nickname}`)
+    debug(`A request has come to /publication/`)
 
     let publication = []
 
@@ -108,7 +109,18 @@ api.get('/publication', async (req, res, next) => {
     }
     res.send(publication)
 })
+api.get('/comment', async (req, res, next) => {
+    debug(`A request has come to /comment/`)
 
+    let comment = []
+
+    try {
+        comment = await Comment.findAll()
+    } catch(e) {
+        return next(e)
+    }
+    res.send(comment)
+})
 api.get('/users/:nickname', async (req, res, next) => {
     debug(`A request has come to /users/${req.params.nickname}`)
 

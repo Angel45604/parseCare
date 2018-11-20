@@ -25,7 +25,7 @@ module.exports = function setupPublication (PublicationModel, UserModel) {
         return PublicationModel.findAll({
           include: [{
             model: UserModel, 
-            as: 'nickname'
+            as: 'usuarioId'
           }]
         })
       }
@@ -41,7 +41,7 @@ module.exports = function setupPublication (PublicationModel, UserModel) {
           },
           include: [{
             model: UserModel, 
-            as: 'nickname'
+            as: 'usuarioId'
           }]
         })
       }
@@ -53,7 +53,7 @@ module.exports = function setupPublication (PublicationModel, UserModel) {
           },
           include: [{
             model: UserModel, 
-            as: 'nickname'
+            as: 'usuarioId'
           }]
         })
       }
