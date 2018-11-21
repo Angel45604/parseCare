@@ -1,5 +1,3 @@
-<!--
 <ng-container *ngFor="let publicacion of publicaciones">
-<ng-content></ng-content>
-<publication-component usuario="{{publicacion.user}}" topic ="{{publicacion.topic}}" likes = "{{publicacion.likes}}" content = "{{publicacion.content}}"></publication-component>
-</ng-container> -->
+<publication-component usuario="{{publicacion.user.nickname}}" topic ="{{publicacion.topic}}" content = "{{publicacion.contenido}}"></publication-component>
+</ng-container>
