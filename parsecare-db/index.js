@@ -39,7 +39,8 @@ module.exports = async function (config) {
     });
     PublicationModel.belongsTo(UserModel, {
         foreignKey: 'usuarioId',
-        constraints: true
+        constraints: true,
+        as: 'user'
     });
     //comment-usuario 1:n comment.usuarioId
     UserModel.hasMany(CommentModel, {
@@ -48,7 +49,8 @@ module.exports = async function (config) {
     });
     CommentModel.belongsTo(UserModel, {
         foreignKey: 'usuarioId',
-        constraints: true
+        constraints: true,
+        as: 'user'
     });
     //comment-publication 1:n comment.publicationId
     PublicationModel.hasMany(CommentModel, {
@@ -57,7 +59,8 @@ module.exports = async function (config) {
     });
     CommentModel.belongsTo(PublicationModel, {
         foreignKey: 'publicationId',
-        constraints: true
+        constraints: true,
+        as: 'publication'
     });
     
     CatRoleModel.bulkCreate([
