@@ -69,8 +69,8 @@ module.exports = async function (config) {
     ])
 
     CommentModel.bulkCreate([
-        {comentario: 'comentario1'},
-        {comentario: 'comentario2'}
+        {comentario: 'comentario1', usuarioId: 1, publicationId: 1},
+        {comentario: 'comentario2', usuarioId: 2, publicationId: 2}
     ])
 
     UserModel.bulkCreate([

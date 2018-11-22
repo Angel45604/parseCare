@@ -1,6 +1,6 @@
 'use strict'
 
-module.exports = function setupComment (CommentModel, UserModel, PublicationModel) {
+module.exports = function setupComment (PublicationModel, UserModel, CommentModel) {
 
     async function createOrUpdate (comment) {
         const cond = {
@@ -22,33 +22,47 @@ module.exports = function setupComment (CommentModel, UserModel, PublicationMode
       }
     
       function findAll() {
-        return CommentModel.findAll()
+        return CommentModel.findAll({
+          include: [{
+            model: UserModel, PublicationModel,  
+            as: 'user',
+            as: 'publication'
+          }]
+        })
       }
     
       function findById (id) {
         return CommentModel.findById(id)
       }
     
+      function findByComentario (comentario) {
+        return PublicationModel.findOne({
+          where: {
+            comentario
+          },
+          include: [{
+            model: UserModel, PublicationModel,
+            as: 'user',
+            as: 'publication'
+          }]
+        })
+      }
+
       function findByFecha (createdAt) {
         return CommentModel.findOne({
           where: {
             createdAt
           },
-          include: [
-            {
-                model: UserModel, 
-                as: 'user'
-            },
-            {
-                model: PublicationModel,
-                as: 'publication'
-            }
-        ]
+          include: [{
+            model: UserModel, PublicationModel,
+            as: 'user',
+            as: 'publication'
+          }]
         })
       }
 
       function findByUser(user) {
-        return CommentModel.findAll({
+        return PublicationModel.findAll({
             where: {
                 user
             },
@@ -58,19 +72,7 @@ module.exports = function setupComment (CommentModel, UserModel, PublicationMode
             }]
         })
       }
-
-      function findByPublication(publication) {
-          return CommentModel.findAll({
-              where: {
-                  publication
-              },
-              include: [{
-                  model: PublicationModel,
-                  where: {publicacion: Sequelize.col('comment.publicacion')}
-              }]
-          })
-      }
-
+    
       function deleteComment (id) {
         return CommentModel.destroy({
           where: {
@@ -79,13 +81,15 @@ module.exports = function setupComment (CommentModel, UserModel, PublicationMode
         })
       }
 
+      
+
       return {
         findByUser,
         findAll,
         createOrUpdate,
         findById,
+        findByComentario,
         findByFecha,
-        findByPublication,
-        deleteComment
+        deleteComment      
       }
 }

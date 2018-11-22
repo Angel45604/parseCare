@@ -8,21 +8,37 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 
-import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatIconModule } from '@angular/material';
-
 import { AppComponent } from './app.component';
 import { PublicationContainer } from './publication-container/publication.component';
 import { PublicationComponent } from './publication/publication.component';
-
 import { UsuarioService } from './services/Usuarios.Service';
+
 import { PublicacionService } from './services/Publicaciones.Service';
+import { ComentarioService } from './services/Comentarios.Service';
+//import { MenubarComponent } from './menu-bar/menu-bar.component';
+//material
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatStepperModule} from '@angular/material/stepper';
+import {MatInputModule} from '@angular/material';
+import {MatButtonModule} from '@angular/material/button';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatIconModule} from '@angular/material/icon';
+import {MatCardModule} from '@angular/material/card';
+import {MatSelectModule} from '@angular/material/select';
+import {MatListModule} from '@angular/material/list';
+import {MatExpansionModule} from '@angular/material/expansion';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     PublicationContainer,
-    PublicationComponent
+    PublicationComponent,
+    //MenubarComponent
   ],
   imports: [
     BrowserModule,
@@ -32,14 +48,25 @@ import { PublicacionService } from './services/Publicaciones.Service';
     //Angular Material
     BrowserAnimationsModule,
     NoopAnimationsModule,
+    MatFormFieldModule,
+    MatStepperModule,
+    MatInputModule,
+    MatButtonModule,
     MatToolbarModule,
+    MatMenuModule,
     MatIconModule,
-
-
+    MatCardModule,
+    MatSelectModule,
+    MatListModule,
+    MatExpansionModule,
+    MatSlideToggleModule,
+    MatCheckboxModule,
+    MatSnackBarModule
   ],
   providers: [
     UsuarioService,
-    PublicacionService
+    PublicacionService,
+    ComentarioService
   ],
   bootstrap: [AppComponent]
 })

@@ -1,0 +1,32 @@
+<!--<mat-toolbar color="primary" class="content" fxLayout="row">
+        <a routerLink="/"><span class="logo"><img src="../../assets/batizhelpdesk.png"></span></a>
+        <span class="spacer"></span>
+        <div *ngIf="isLogged()">
+            <form (ngSubmit)="search()">
+                <td-search-box class="search" backIcon="arrow_back" placeholder="Folio" [showUnderline]="false" [debounce]="0" [alwaysVisible]="false" (searchDebounce)="folio = $event" (search)="folio = $event">
+            </td-search-box>
+            </form>
+        </div>
+        <span>{{username}}</span>
+        <button mat-icon-button [matMenuTriggerFor]="menu" *ngIf="isLogged()">
+            <mat-icon>more_vert</mat-icon>
+        </button>
+        <div *ngIf="!isLogged()">
+            <form class="example-form" fxFlex="50" (ngSumbit)="login()">
+            <mat-form-field class="user">
+            <input  class="user" matInput placeholder="User" required name="user" [(ngModel)]="usrname" class="form-control">
+            </mat-form-field>
+            <mat-form-field  class="user">
+                <input class="user" matInput placeholder="Password" type="password" name="password" required [(ngModel)]="password" class="form-control">
+            </mat-form-field>
+            <button type="submit" color="{{[color]}}" (click)="login()" mat-raised-button color="primary">Enviar</button>
+            </form>
+        </div>
+    </mat-toolbar>
+        <mat-menu #menu="matMenu">
+        <button mat-menu-item (click)="logOut()">
+            <mat-icon>dialpad</mat-icon>
+            <span>Cerrar Sesion</span>
+        </button>
+        
+        </mat-menu>

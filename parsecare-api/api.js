@@ -16,7 +16,7 @@ api.use(morgan('dev'))
 api.use(bodyParser.urlencoded({extended: true}))
 api.use(bodyParser.json())
 
-let services, User,Comment, Publication, Role
+let services, User, Comment, Publication, Role
 
 api.use('*', async (req, res, next) => {
     if (!services) {

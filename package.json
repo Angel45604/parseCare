@@ -7,5 +7,10 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Oscar Uriel",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "@angular/animations": "^7.1.0",
+    "@angular/cdk": "^7.1.0",
+    "@angular/material": "^7.1.0"
+  }
 }

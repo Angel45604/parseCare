@@ -1,0 +1,42 @@
+/*.content{
+    position: fixed;
+    z-index:3;
+}
+
+.logo{
+    margin: .1em;
+    padding-top: .4em;
+}
+
+img{
+    padding: .5em;
+    width: 3em;
+    height: 3em;
+}
+
+.spacer{
+    -webkit-box-flex:1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+}
+
+
+  .user {
+      height: 10%;
+  }
+
+  input {
+      font-size: 17px;
+  }
+
+  @media (max-width: 600px) {
+    .search {
+      display: none;
+    }
+
+    mat-form-field {
+        max-width: 35%;
+        font-size: 15px;
+    }
+    
+  }
