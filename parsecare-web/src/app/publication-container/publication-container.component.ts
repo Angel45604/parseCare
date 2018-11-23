@@ -7,8 +7,9 @@ import {PublicacionService} from "../services/Publicaciones.Service";
   styleUrls: ['./publication-container.component.css']
 })
 
-export class PublicationContainer implements OnInit {
-  publicaciones = [];
+export class PublicationContainerComponent implements OnInit {
+  publicaciones: Publication[] = [];
+  ola = {adios: 'ola'};
 
   constructor(private publicationService: PublicacionService) {}
 
@@ -17,9 +18,10 @@ export class PublicationContainer implements OnInit {
     this.publicationService.getPublicaciones()
       .subscribe(publicaciones => {
         this.publicaciones = publicaciones;
+        console.log(this.publicaciones[0]);
       }, err => {
         console.error(err);
-      })
+      });
 
     /*for(let i = 0; i< 5; i++) {
       this.publicaciones.push(new Publication(`Titulo ${i}`, `contenido ${i}`, `usuario ${i}`, i));

@@ -9,7 +9,7 @@ import { NgModule } from '@angular/core';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
-import { PublicationContainer } from './publication-container/publication.component';
+import { PublicationContainerComponent } from './publication-container/publication-container.component';
 import { PublicationComponent } from './publication/publication.component';
 import { UsuarioService } from './services/Usuarios.Service';
 
@@ -31,13 +31,29 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { CommentComponent } from './comment/comment.component';
+import { CommentContainerComponent } from './comment-container/comment-container.component';
+import {LoginComponent} from "./login/login.component";
+import {RouterModule, Routes} from "@angular/router";
+import {InitComponent} from "./init.component";
+import {RegistroComponent} from "./registro/registro.component";
 
+const appRoutes: Routes = [
+  {path: '', component: AppComponent },
+  {path: 'login', component: LoginComponent},
+  {path: 'registro', component: RegistroComponent}
+]
 
 @NgModule({
   declarations: [
     AppComponent,
-    PublicationContainer,
+    PublicationContainerComponent,
     PublicationComponent,
+    CommentComponent,
+    CommentContainerComponent,
+    LoginComponent,
+    InitComponent,
+    RegistroComponent
     //MenubarComponent
   ],
   imports: [
@@ -61,14 +77,15 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     MatExpansionModule,
     MatSlideToggleModule,
     MatCheckboxModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [
     UsuarioService,
     PublicacionService,
     ComentarioService
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [InitComponent]
 })
 
 export class AppModule { }

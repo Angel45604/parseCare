@@ -11,7 +11,7 @@
   "author": "Oscar Uriel",
   "license": "MIT",
   "dependencies": {
-    "parsecare-db": "file:../parsecare-db",
+    "bcrypt": "^3.0.2",
     "chalk": "^2.4.1",
     "cookie-parser": "^1.4.3",
     "cors": "^2.8.4",
@@ -20,9 +20,11 @@
     "express-asyncify": "^1.0.0",
     "express-session": "^1.15.6",
     "express-session-sequelize": "^1.1.0",
+    "jsonwebtoken": "^8.4.0",
     "morgan": "^1.9.1",
     "multer": "^1.4.1",
     "mysql2": "^1.6.1",
+    "parsecare-db": "file:../parsecare-db",
     "sequelize": "^4.41.0"
   },
   "devDependencies": {

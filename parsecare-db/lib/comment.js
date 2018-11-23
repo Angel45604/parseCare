@@ -1,6 +1,6 @@
 'use strict'
 
-module.exports = function setupComment (PublicationModel, UserModel, CommentModel) {
+module.exports = function setupComment (CommentModel, UserModel, PublicationModel) {
 
     async function createOrUpdate (comment) {
         const cond = {
@@ -23,11 +23,19 @@ module.exports = function setupComment (PublicationModel, UserModel, CommentMode
     
       function findAll() {
         return CommentModel.findAll({
-          include: [{
-            model: UserModel, PublicationModel,  
-            as: 'user',
-            as: 'publication'
-          }]
+          include: [
+              {
+                model: UserModel,
+                as: 'user',
+              },
+              {
+                model: PublicationModel,
+                  as: 'publication',
+                  include: [{
+                    model: UserModel,
+                      as: 'user'
+                  }]
+              }]
         })
       }
     

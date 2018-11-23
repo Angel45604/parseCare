@@ -1,8 +1,10 @@
+import {Usuario} from "./Usuario";
+
 export class Publication {
-    constructor(
-        public topic : string,
-        public content : string,
-        public user: string,
-        public likes: number
-    ){}
+  contenido: string;
+  topic: string;
+  archivo: string;
+  user: Usuario = new Usuario();
+  comments: Comment[] = [];
+
 }

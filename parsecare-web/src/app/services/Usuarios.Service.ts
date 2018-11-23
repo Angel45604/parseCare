@@ -25,6 +25,12 @@ export class UsuarioService {
   removeUsuario (idUsuario: string){
     let headers = new Headers({ 'Content-Type': 'application/json' });
     return this.http.delete(`${this.statusurl}/${idUsuario}`, {headers: headers}) // ...using put request
-      .pipe(map(res => res )) // ...now we return data
+      .pipe(map(res => res )); // ...now we return data
+  }
+
+  login (usuario: Object) {
+    let headers = new Headers({ 'Content-Type': 'application/json' });
+    return this.http.post('http://localhost:3000/storage/login', usuario, {headers: headers})
+      .pipe(map(res => res.json()));
   }
 }

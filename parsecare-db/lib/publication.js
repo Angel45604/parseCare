@@ -1,6 +1,6 @@
 'use strict'
 
-module.exports = function setupPublication (PublicationModel, UserModel) {
+module.exports = function setupPublication (PublicationModel, UserModel, CommentModel) {
 
     async function createOrUpdate (publication) {
         const cond = {
@@ -23,15 +23,38 @@ module.exports = function setupPublication (PublicationModel, UserModel) {
     
       function findAll() {
         return PublicationModel.findAll({
-          include: [{
-            model: UserModel, 
-            as: 'user'
-          }]
+          include: [
+              {
+                model: UserModel,
+                as: 'user'
+              },
+              {
+                model: CommentModel,
+                  as: 'comments',
+                  include: [{
+                    model: UserModel,
+                      as: 'user'
+                  }]
+              }]
         })
       }
     
       function findById (id) {
-        return PublicationModel.findById(id)
+        return PublicationModel.findById(id, {
+            include: [
+                {
+                    model: UserModel,
+                    as: 'user'
+                },
+                {
+                    model: CommentModel,
+                    as: 'comments',
+                    include: [{
+                        model: UserModel,
+                        as: 'user'
+                    }]
+                }]
+        })
       }
     
       function findByTopic (topic) {
@@ -39,10 +62,19 @@ module.exports = function setupPublication (PublicationModel, UserModel) {
           where: {
             topic
           },
-          include: [{
-            model: UserModel, 
-            as: 'user'
-          }]
+            include: [
+                {
+                    model: UserModel,
+                    as: 'user'
+                },
+                {
+                    model: CommentModel,
+                    as: 'comments',
+                    include: [{
+                        model: UserModel,
+                        as: 'user'
+                    }]
+                }]
         })
       }
 
@@ -51,10 +83,19 @@ module.exports = function setupPublication (PublicationModel, UserModel) {
           where: {
             createdAt
           },
-          include: [{
-            model: UserModel, 
-            as: 'user'
-          }]
+            include: [
+                {
+                    model: UserModel,
+                    as: 'user'
+                },
+                {
+                    model: CommentModel,
+                    as: 'comments',
+                    include: [{
+                        model: UserModel,
+                        as: 'user'
+                    }]
+                }]
         })
       }
 
@@ -63,10 +104,20 @@ module.exports = function setupPublication (PublicationModel, UserModel) {
             where: {
                 user
             },
-            include: [{
-                model: UserModel,
-                where: { usuario: Sequelize.col('publicacione.usuario') }
-            }]
+            include: [
+                {
+                    model: UserModel,
+                    where: { usuario: Sequelize.col('publicacione.usuario') }
+                },
+                {
+                    model: CommentModel,
+                    as: 'comments',
+                    include: [{
+                        model: UserModel,
+                        as: 'user'
+                    }]
+                }
+            ]
         })
       }
     

@@ -18,6 +18,12 @@ api.use(bodyParser.json())
 
 let services, User, Comment, Publication, Role
 
+api.use( (req, res, next) => {
+    res.header("Access-Control-Allow-Origin", "*")
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept")
+    next()
+})
+
 api.use('*', async (req, res, next) => {
     if (!services) {
         debug('Conectando a la Base de Datos')
@@ -137,16 +143,15 @@ api.get('/users/:nickname', async (req, res, next) => {
 
 api.post('/users', async (req, res, next) => {
     debug(`A request has come to /users POST`)
-
     let user = {
         nombre: req.body.nombre,
         apellidos: req.body.apellidos,
         nickname: req.body.nickname,
         password: req.body.password,
         correo: req.body.correo,
-        rolId: req.body.rolId
+        //rolId: req.body.rolId
     }
-
+    debug(user)
     try {
         await User.createOrUpdate(user)
     } catch(e) {

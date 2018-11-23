@@ -1,7 +1,5 @@
-<h1>Usuario: {{usuario}}</h1>
-<h2>Titulo: {{topic}}</h2>
-<p>Contenido: {{content}} </p>
-<input type="text" [(ngModel)]="variable" placeholder="PICAME">
-<input type="button" [disabled]="isenabled" value="MEMES">
-<p>{{archivo}}</p>
+<h1>Usuario: {{publication.user.nickname}}</h1>
+<h2>Titulo: {{publication.topic}}</h2>
+<h3>Contenido: {{publication.contenido}} </h3>
+<comment-container-component comments="{{publication.comments | json}}"></comment-container-component>
 <br>

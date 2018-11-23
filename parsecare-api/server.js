@@ -9,12 +9,15 @@ const cors = require('cors')
 
 const api = require('./api')
 
+const storage = require('./storage')
+
 const port = process.env.PORT || 3000
 const app = asyncify(express())
 const server = http.createServer(app)
 
 
 app.use('/api', api)
+app.use('/storage', storage)
 
 //Error Handler
 app.use((err, req, res, next) => {

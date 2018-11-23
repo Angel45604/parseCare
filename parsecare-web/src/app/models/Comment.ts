@@ -1,6 +1,6 @@
+import {Usuario} from "./Usuario";
+
 export class Comment {
-    constructor(
-        public comentario : string,
-        public user: string
-    ){}
+  comentario: string;
+  usuario: Usuario = new Usuario();
 }

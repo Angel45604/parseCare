@@ -1,5 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
+import {Component, OnInit, Input, OnChanges} from '@angular/core';
 import { Publication } from '../models/Publication';
+import {Comment} from "@angular/compiler";
 
 @Component({
   selector: 'publication-component',
@@ -7,22 +8,28 @@ import { Publication } from '../models/Publication';
   styleUrls: ['./publication.component.css']
 })
 
-export class PublicationComponent implements OnInit {
+export class PublicationComponent implements OnInit, OnChanges {
     
-  @Input("publicacionInput") publicacionInput: any;
-  @Input("usuario") usuario : string;
-  @Input("topic") topic : string;
-  @Input("likes") likes : number;
-  @Input("content") content : string;
-  @Input("archivo") archivo: string;
-    publicacion : Publication;
-    isenabled: boolean;
-    variable: string;
+  @Input() publication: Publication;
 
-    constructor() {}
+
+  isenabled: boolean;
+  variable: string;
+
+    constructor() {
+      //this.publication = JSON.parse(this.publication);
+      //this.comments = this.publication.comments;
+    }
     
   ngOnInit() {
+    // @ts-ignore
+    this.publication = JSON.parse(this.publication);
     this.isenabled = true;
     this.variable = 'ola';
+  }
+
+  ngOnChanges() {
+    // @ts-ignore
+    console.log(JSON.parse(this.publication));
   }
 }
