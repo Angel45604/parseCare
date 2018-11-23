@@ -8,5 +8,16 @@
 </mat-toolbar-row>
 </mat-toolbar>
 <br>
-
+<form (ngSubmit)="submitPublication()">
+<mat-form-field>
+  <input name="titulo" [(ngModel)]="publication.topic" matInput placeholder="Titulo">
+</mat-form-field>
+  <br><br>
+  <mat-form-field>
+    <textarea name="contenido" [(ngModel)]="publication.contenido" matInput placeholder="Contenido"></textarea>
+  </mat-form-field>
+  <br><br>
+  <input type="file" (change)="fileChangeEvent($event)" placeholder="Upload file..." />
+  <br><br><button mat-raised-button id="main-button">Registrarse</button>
+</form>
 <publication-container-component></publication-container-component>

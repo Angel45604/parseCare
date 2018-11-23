@@ -159,37 +159,50 @@ api.post('/users', async (req, res, next) => {
     }
     res.send(user)
 })
+
+
 api.post('/publication', async (req, res, next) => {
     debug(`A request has come to /publication POST`)
 
-    let publication = {
-        contenido: req.body.contenido,
-        topic: req.body.topic,
-        archivo: req.body.archivo,
-        usuarioId: req.body.usuarioId
-    }
+    let publication = req.body
+    debug(req.body)
 
     try {
-        await Publication.createOrUpdate(publication)
+        User.findById(req.body.user.id).then(usr => {
+            debug('USUARIO', usr)
+            usr.createPublicacione(req.body).then(pub => {
+                debug('PUBLICACION', pub)
+                res.send(publicacion)
+            })
+        })
     } catch(e) {
         return next(e)
     }
-    res.send(publication)
+
 })
 
-api.post('/publications/comment', async (req, res, next) => {
-    debug(`A request has come to /publications/comment POST`)
+api.post('/comment', async (req, res, next) => {
+    debug(`A request has come to /comment POST`)
 
-    let comment = {
-        comentario: req.body.comentario
-    }
+    let comment = req.body
+    debug(comment)
 
     try {
-        await Publication.insertComment(comment)
+        User.findById(req.body.user.id).then(usr => {
+            debug('USUARIO', usr)
+            usr.createComment(req.body).then(com => {
+                debug('COMENTARIO', com)
+                Publication.findById(req.body.publicationId).then(pub => {
+                    pub.createComment(req.body).then(comm => {
+                        debug('COMENTARIO', comm)
+                        res.send(comment)
+                    })
+                })
+            })
+        })
     } catch(e) {
         return next(e)
     }
-    res.send(comment)
 })
 
 

@@ -2,5 +2,6 @@ import {Usuario} from "./Usuario";
 
 export class Comment {
   comentario: string;
-  usuario: Usuario = new Usuario();
+  user: Usuario = new Usuario();
+  publicationId: number;
 }

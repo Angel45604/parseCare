@@ -1,5 +1,14 @@
 <h1>Usuario: {{publication.user.nickname}}</h1>
 <h2>Titulo: {{publication.topic}}</h2>
 <h3>Contenido: {{publication.contenido}} </h3>
+<div>
+  <img width="200px" height="200px" src="{{publication.archivo}}" alt="">
+</div>
 <comment-container-component comments="{{publication.comments | json}}"></comment-container-component>
 <br>
+<form (ngSubmit)="submitComment()">
+  <mat-form-field>
+    <input name="comentario" [(ngModel)]="comentario.comentario" matInput placeholder="Escribe un comentario">
+  </mat-form-field>
+    <br><button mat-raised-button id="main-button">Comentar</button>
+</form>

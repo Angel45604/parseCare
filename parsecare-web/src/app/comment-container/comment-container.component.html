@@ -1,6 +1,3 @@
 <ng-container *ngFor="let comentario of comments">
-    <mat-form-field>
-        <input name="comentario" [(ngModel)]="avr" matInput placeholder="Escribe un comentario">
-      </mat-form-field>
   <comment-component comment="{{comentario | json}}"></comment-component>
 </ng-container>

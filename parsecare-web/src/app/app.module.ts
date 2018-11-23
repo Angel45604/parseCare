@@ -38,6 +38,10 @@ import {RouterModule, Routes} from "@angular/router";
 import {InitComponent} from "./init.component";
 import {RegistroComponent} from "./registro/registro.component";
 
+import {environment} from "../environments/environment";
+import {AngularFireModule} from "@angular/fire";
+import {AngularFireStorageModule, StorageBucket} from '@angular/fire/storage'
+
 const appRoutes: Routes = [
   {path: '', component: AppComponent },
   {path: 'login', component: LoginComponent},
@@ -78,12 +82,16 @@ const appRoutes: Routes = [
     MatSlideToggleModule,
     MatCheckboxModule,
     MatSnackBarModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireStorageModule,
+
   ],
   providers: [
     UsuarioService,
     PublicacionService,
-    ComentarioService
+    ComentarioService,
+    { provide: StorageBucket, useValue: 'parsecare.appspot.com' }
   ],
   bootstrap: [InitComponent]
 })
