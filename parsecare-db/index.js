@@ -77,7 +77,7 @@ module.exports = async function (config) {
     const Comment = setupComment(CommentModel, UserModel, PublicationModel)
     const Publication = setupPublication(PublicationModel, UserModel, CommentModel)
 
-    await CatRoleModel.bulkCreate([
+    /*await CatRoleModel.bulkCreate([
         {rol: 'Usuario'},
         {rol: 'Administrador'}
     ])
@@ -99,6 +99,7 @@ module.exports = async function (config) {
         {comentario: 'comentario1', usuarioId: 1, publicationId: 1},
         {comentario: 'comentario2', usuarioId: 2, publicationId: 2}
     ])
+    */
 
     return {
         User,
