@@ -1,10 +1,12 @@
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-
 import { HttpModule, RequestOptions, Headers } from '@angular/http';
 import { HttpClientModule} from '@angular/common/http';
 
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+//Animations
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+//Material
+import {MaterialModule} from './material-component';
 import { NgModule } from '@angular/core';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 
@@ -40,7 +42,7 @@ import {RegistroComponent} from "./registro/registro.component";
 
 import {environment} from "../environments/environment";
 import {AngularFireModule} from "@angular/fire";
-import {AngularFireStorageModule, StorageBucket} from '@angular/fire/storage'
+import {AngularFireStorageModule, StorageBucket} from '@angular/fire/storage';
 
 const appRoutes: Routes = [
   {path: '', component: AppComponent },
@@ -66,6 +68,7 @@ const appRoutes: Routes = [
     HttpModule,
     HttpClientModule,
     //Angular Material
+    MaterialModule,
     BrowserAnimationsModule,
     NoopAnimationsModule,
     MatFormFieldModule,

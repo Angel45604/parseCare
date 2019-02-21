@@ -1,9 +1,37 @@
-<h1>Usuario: {{publication.user.nickname}}</h1>
-<h2>Titulo: {{publication.topic}}</h2>
-<h3>Contenido: {{publication.contenido}} </h3>
-<div>
-  <img width="200px" height="200px" src="{{publication.archivo}}" alt="">
-</div>
+<mat-card class="example-card">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>{{publication.user.nickname}}</mat-card-title>
+    <mat-card-subtitle>Un perro no tiene nada que ver con un pez .-.</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+  <mat-card-content>
+    <p>
+      Bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla.<br>
+      A bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla.
+      bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
+      
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button>LIKE</button>
+    <button mat-button>SHARE</button>
+  </mat-card-actions>
+</mat-card>
+<br><br>
+
+<mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>{{publication.user.nickname}}</mat-card-title>
+      <mat-card-subtitle>{{publication.topic}}</mat-card-subtitle>
+    </mat-card-header>
+    <img width="200px" height="200px" src="{{publication.archivo}}" alt="">
+    <mat-card-content>
+      <p>
+          {{publication.contenido}}
+      </p>
+      
 <comment-container-component comments="{{publication.comments | json}}"></comment-container-component>
 <br>
 <form (ngSubmit)="submitComment()">
@@ -11,4 +39,14 @@
     <input name="comentario" [(ngModel)]="comentario.comentario" matInput placeholder="Escribe un comentario">
   </mat-form-field>
     <br><button mat-raised-button id="main-button">Comentar</button>
+    <br><br>
 </form>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>LIKE</button>
+      <button mat-button>SHARE</button>
+    </mat-card-actions>
+  </mat-card>
+  <br><br>
+
+

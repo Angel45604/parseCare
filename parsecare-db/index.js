@@ -77,12 +77,12 @@ module.exports = async function (config) {
     const Comment = setupComment(CommentModel, UserModel, PublicationModel)
     const Publication = setupPublication(PublicationModel, UserModel, CommentModel)
 
-    /*await CatRoleModel.bulkCreate([
+    await CatRoleModel.bulkCreate([
         {rol: 'Usuario'},
         {rol: 'Administrador'}
     ])
 
-    await UserModel.bulkCreate([
+    /*await UserModel.bulkCreate([
         { nombre: 'Angel', apellidos: 'Marcos Montes', nickname: 'Angelito123', correo: 'a.a@a.a', password: 'megustanlosmemes', rolId: 1},
         { nombre: 'Oscar', apellidos: 'Gutierres Zorra', nickname: 'urielox1', correo: 'b.b@b.b', password: 'megustanlosmemes1', rolId: 1},
         { nombre: 'Uriel', apellidos: 'Garcia del Oso', nickname: 'urielox2', correo: 'c.c@c.c', password: 'megustanlosmemes2', rolId: 1},
@@ -98,8 +98,8 @@ module.exports = async function (config) {
     await CommentModel.bulkCreate([
         {comentario: 'comentario1', usuarioId: 1, publicationId: 1},
         {comentario: 'comentario2', usuarioId: 2, publicationId: 2}
-    ])
-    */
+    ])*/
+    
 
     return {
         User,

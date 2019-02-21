@@ -20,7 +20,7 @@ export class RegistroComponent implements OnInit {
       .subscribe(res => {
         console.log(res);
         alert('Usuario Registrado');
-        this.router.navigate(['/']);
+        this.router.navigate(['/login']);
       }, err => {
         console.error(err);
       });
