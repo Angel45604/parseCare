@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import { UsuarioService} from "./services/Usuarios.Service";
-import { PublicacionService} from "./services/Publicaciones.Service";
+import {UsuarioService} from "./services/Usuarios.Service";
+import {PublicacionService} from "./services/Publicaciones.Service";
 import {Publication} from "./models/Publication";
 import {Router} from "@angular/router";
 import {AngularFireStorage} from "@angular/fire/storage";
@@ -73,6 +73,7 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.router.navigate(['/']);
     this.usuarioService.getUsuarios().subscribe(usuarios => {
      //console.log(usuarios);
       this.usuarios = usuarios;

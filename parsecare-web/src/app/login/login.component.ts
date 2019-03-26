@@ -30,6 +30,7 @@ export class LoginComponent implements OnInit {
         this.router.navigate(['/']);
       }, err => {
         console.error(err);
+        alert("El usuario o la contraseña son incorrectas");
       });
   }
 

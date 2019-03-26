@@ -31,7 +31,8 @@ export class PublicationComponent implements OnInit, OnChanges {
         .subscribe(res => {
           alert('Comentario comentado');
         }, err => {
-          console.error(err);
+          console.error(err)
+          
         });
     }
   ngOnInit() {
