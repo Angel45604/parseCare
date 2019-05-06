@@ -27,7 +27,7 @@ export class LoginComponent implements OnInit {
         sessionStorage.setItem('token', token.token);
         // @ts-ignore
         sessionStorage.setItem('id', token.id);
-        this.router.navigate(['/']);
+        this.router.navigate(['/inicio']);
       }, err => {
         console.error(err);
         alert("El usuario o la contraseña son incorrectas");

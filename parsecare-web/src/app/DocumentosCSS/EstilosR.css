@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css?family=Kirang+Haerang');
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: url("../Resourses/Images/wi.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+div{
+    margin-top: 20%;
+    font-family: 'Kirang Haerang';
+    font-size: 4em;
+    background: rgba(0,0,0,0.6);
+}
+a{
+    -webkit-animation: 2s cambio infinite linear;
+}
+a:hover{
+    -webkit-animation-play-state: paused;
+    color: white;
+}
+@-webkit-keyframes cambio{
+    25%{
+        color: #ffff00;
+    }
+    50%{
+        color: #ff33cc;
+    }
+    75%{
+        color: #33ccff;
+    }
+}

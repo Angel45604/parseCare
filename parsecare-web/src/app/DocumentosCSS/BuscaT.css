@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster|Quicksand');
+.aquivaTodo{
+    height: 100%;
+    width: 100%;
+    background-color: #3FBFBF;
+    background-size: cover;
+    background-attachment: scroll;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+
+.AquiVanMascotas{
+    
+    background: rgba(140,114,114,.5);
+    border: 5px #0091ea;
+    padding-top: 20px;
+    width: 55%;
+    border: 5px solid pink;
+    border-radius: 8%;
+    padding-top: 0%;
+}
+aquivaunamascota{
+    border: 5px solid purple;
+}
+.AquiVanMascotas:hover{
+    border: 10px solid #0097a7;
+}
+.ABC{
+    width: 400px;
+    height: 300px;
+    padding-left: 10px;
+    padding-top: 20px;
+    align-content: center;
+    border-radius: 8%;
+    
+}
+h2{
+    font-family: 'Lobster', cursive;
+    padding: 0;
+    border: 0;
+    height:24px;
+    font-size:37px;
+    
+}
+h2:hover{
+    color: purple;
+}
+.duenio{
+    border: 5px solid pink;
+    width: 70%;
+    border-radius: 10%;
+}
+.duenio:hover{
+    border: 5px solid #006666;
+}
+p{
+    font-family: 'Quicksand', sans-serif;
+    color: white;
+    font-size: 20px;
+}
+hr{
+    border: 5px solid pink;
+    width: 90%;
+}
+hr:hover{
+     border: 5px solid #0097a7;
+}
+     .RECOMPENSA{
+         width: 50%;  
+        border: 2px solid gray;
+
+     }
+  

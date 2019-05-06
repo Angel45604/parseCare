@@ -1,5 +1,4 @@
-
-  .example-card {
+.example-card {
     max-width: 400px;
     position: relative;
   }
@@ -7,7 +6,7 @@
   
 
   @import url('https://fonts.googleapis.com/css?family=Kirang+Haerang');
-  @import url('https://getbootstrap.com/docs/4.0/examples/carousel/');
+
 *{
     margin: 0;
     padding: 0;
@@ -34,7 +33,10 @@
     background-color: #ff00ff;
     border-color: black;
 }
-
+a{
+    text-decoration: none;
+    color: white;
+}
 
 #cabecera{
     width: 100%;
@@ -45,36 +47,6 @@
     position: fixed, absolute;
 }
 
-#carouselExampleCaptions{
-  position: relative;
-}
-.amonos {
-  background-color:#52BE80 ;
-  color: white;
-  padding: 15px 25px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  opacity:0.9;
-}
-.amonos1{
-  background-color:#EC7063 ;
-  color: white;
-  padding: 15px 25px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  opacity:0.9;
-}
-.amonos2{
-  background-color:#3498DB ;
-  color: white;
-  padding: 15px 25px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  opacity:0.7;
-}
 #menu{
     margin-top:07%;
     width: 100%;
@@ -191,4 +163,3 @@ margin: auto;
   margin-left:40%;} 
 
   }
-

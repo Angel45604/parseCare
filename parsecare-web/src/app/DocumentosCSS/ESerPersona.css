@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css?family=Gugi');
+@import url('https://fonts.googleapis.com/css?family=Berkshire+Swash');
+@import url('https://fonts.googleapis.com/css?family=Poiret+One');
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script|Rajdhani|Teko');
+
+/*FYG*/
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
+@import url('https://fonts.googleapis.com/css?family=Kelly+Slab');
+@import url('https://fonts.googleapis.com/css?family=David+Libre');
+@import url('https://fonts.googleapis.com/css?family=Advent+Pro');
+
+
+*
+{
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+}
+body {
+    line-height: 1.6;
+    font-size: 16px;
+}
+section#banner{
+    width: 100%;
+    background-image: url(../Resourses/Images/fondos/d.jpg);
+    background-size: cover;
+    background-attachment: scroll;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+header{
+    position: fixed;
+    width: 100%;
+    height: 70px;
+    background-color: transparent;
+    -webkit-transition: background-color .5s;
+}
+nav{
+    display: table;
+    margin: auto;
+    margin-top: 15px;
+    -webkit-transition: margin-left .5s;
+}
+ul {
+    display: block;
+    float: left;
+    list-style: none;
+}
+ul a{
+    color:black;
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+ul li{
+    float: left;
+    margin: 10px;
+    padding: 2px;
+}
+img#logo{
+    float: left;
+    height: 300px;
+    width: 300px;
+    display: block;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 120px;
+    -webkit-transition: width.5s, height.5s, margin-right.5s, margin-top.5s;
+}
+
+
+/*FYG*/
+#Atras{
+    height: 100%;
+    background-color: rgb(46, 17, 45);
+    background-size: cover;
+    background-attachment: scroll;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#Ser{
+    margin: auto;
+    width: 80%;
+    background-color: rgb(255,255,255);
+    height: 100%;
+    display: table;
+    border-radius: 10px;
+}
+.NombreM{
+    padding: 12px;
+    width: 98%;
+    font-size: 1.5em;
+    text-align: center;
+    border-radius: 10px;
+    color: white;
+    float: left;
+    font-family:'Press Start 2P';
+    background-color: #006699;
+    box-shadow: 1px 1px 10px 0px black;
+}
+.subti{
+font-family:'Kelly Slab';
+font-size:1em;
+text-align: justify;
+font-weight: bold;
+}
+p{
+  text-align: justify;
+  font-family:'David Libre';
+  font-size:18px;
+  padding-bottom: 1%;
+  padding-left: 2%;
+  padding-right: 2%;
+}
+#des{
+    font-family:'Kelly Slab';
+    font-size: 1.3em;
+    font-weight: bold;
+    text-align:center;
+}

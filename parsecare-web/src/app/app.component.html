@@ -1,17 +1,46 @@
-<mat-toolbar>
-    <!--<menu-bar-component [isAdmin]="isAdmin" [username]="username"></menu-bar-component>-->
-<mat-toolbar-row>
-  
-  <span><h1 class="mat-display-1">Parsecare</h1></span>
-  <span class="example-spacer"></span>
-  <mat-icon class="example-icon">favorite</mat-icon>
-  <mat-icon class="example-icon">delete</mat-icon>
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-<img src="favicon.ico" style="width: 30px; height: 30px" >
-<img src="https://firebasestorage.googleapis.com/v0/b/parsecare.appspot.com/o/pictures%2F1553574203731.jpg?alt=media&token=d4000ea9-216f-4a6c-8196-8adce8262543" style="width: 30px; height: 30px">
-</mat-toolbar-row>
-</mat-toolbar>
+
+<header>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" style="height: 50px;">
+      <a class="navbar-brand" href="#" style="margin-left: 1%;">ParseCare</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/inicio">Comunidad <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="#">Biblioteca</a>
+            </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="/login">Iniciar Sesion!</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="/registro">Registrate!</a>
+          </li>
+          
+          <li class="nav-item">
+              <a class="nav-link" href="/soporte">Soporte Tecnico</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Conocenos!</a>
+              </li>
+            
+        </ul>
+        <form class="form-inline mt-2 mt-md-0" style="margin-right: 1%;">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+  </header>
+
 <br>
+<br>
+
 <div class="bd-example">
     <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
@@ -20,27 +49,45 @@
         <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
       </ol>
       <div class="carousel-inner">
+        
         <div class="carousel-item active">
-          <img src="https://firebasestorage.googleapis.com/v0/b/parsecare.appspot.com/o/pictures%2F1553574203731.jpg?alt=media&token=d4000ea9-216f-4a6c-8196-8adce8262543"style="width: 500px; height: 400px" class="d-block w-100" alt="...">
-          <div class="carousel-caption d-none d-md-block">
-            <h5>First slide label</h5>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+            <img src="https://firebasestorage.googleapis.com/v0/b/parsecare.appspot.com/o/pictures%2F1557132477618.jpg?alt=media&token=a19c7d29-23e7-4d87-a0a3-237cd2f4beb8" style="width: 100%; height: 650px" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block text-center">
+              <h1 style="color: #FDFEFE;">¡Bienvenido!</h1><br>
+              <h4>
+              <p style="color: #FDFEFE;">Sabemos que has tenido un dia pesado. <br>
+                Sientete libre de interactuar con otros usuarios en nuestro foro c:
+              </p>
+            </h4>
+            <br>
+            <a href="http://localhost:4200/registro" target="_self" class="amonos1">Ingresa al Foro!</a>
+            </div>
           </div>
-        </div>
-        <div class="carousel-item">
-          <img src="https://firebasestorage.googleapis.com/v0/b/parsecare.appspot.com/o/pictures%2F1553596717494.jpg?alt=media&token=1de1044f-7c19-407f-8b3f-1c36622b9160" style="width: 500px; height: 400px" class="d-block w-100" alt="...">
-          <div class="carousel-caption d-none d-md-block">
-            <h5>Second slide label</h5>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img src="favicon.ico" style="width: 500px; height: 400px" class="d-block w-100" alt="...">
-          <div class="carousel-caption d-none d-md-block">
-            <h5>Third slide label</h5>
-            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-          </div>
-        </div>
+          <div class="carousel-item">
+              <img src="https://firebasestorage.googleapis.com/v0/b/parsecare.appspot.com/o/pictures%2F1557133115356.jpg?alt=media&token=b9e6cc52-5c12-4129-8e45-dd8145e2a274" style="width: 100%; height: 650px;" class="d-block w-100" alt="...">
+              <div class="carousel-caption d-none d-md-block text-left">
+                <h1> Accede a Nuestra Biblioteca de Peces</h1><br>
+                <h5>
+                <p>No encuentras una mascota ideal?. <br>
+                  Averigua por que un pez es una excelente opción ;) 
+                </p>
+              </h5>
+              <br>
+              <a href="http://localhost:4200/registro" target="_self" class="amonos2">Biblioteca</a>
+              </div>
+            </div>
+          <div class="carousel-item ">
+              <img src="https://firebasestorage.googleapis.com/v0/b/parsecare.appspot.com/o/pictures%2F1557126086878.jpg?alt=media&token=e41de530-c2f5-4c93-9a82-3d5b9ebec532" style="width: 100%; height: 650px" class="d-block w-100" alt="...">
+              <div class="carousel-caption d-none d-md-block text-left">
+                <h2>Consejos y más!</h2><br>
+                <h6><p>Accede a los consejos para brindarles el mejor <br>
+                  cuidado a tus peces c:
+                </p>
+              </h6>
+              <br>
+              <a href="http://localhost:4200/registro" target="_self" class="amonos">Consejos y más...</a>
+              </div>
+            </div>
       </div>
       <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -53,41 +100,4 @@
     </div>
   </div>
 
-<button mat-icon-button [matMenuTriggerFor]="menu">
-  <mat-icon>reorder</mat-icon>
-</button>
-<mat-menu #menu="matMenu">
-  <button mat-menu-item>
-    <mat-icon>book</mat-icon>
-    <span>Biblioteca de Peces</span>
-  </button>
-  <button mat-menu-item >
-    <mat-icon>settings</mat-icon>
-    <span>Ajustes</span>
-  </button>
-  <button mat-menu-item>
-    <mat-icon>account_box</mat-icon>
-    <span>Cerrar Sesión</span>
-  </button>
-</mat-menu>
-<br>
-
-<mat-card class="example-card">
-<h1><mat-icon>add_box</mat-icon>Crear Publicación</h1><br>
-<form (ngSubmit)="submitPublication()">
-<mat-form-field>
-  <input name="titulo" [(ngModel)]="publication.topic" matInput placeholder="Titulo">
-</mat-form-field>
-  <br><br>
-  <mat-form-field>
-    <textarea name="contenido" [(ngModel)]="publication.contenido" matInput placeholder="Contenido"></textarea>
-  </mat-form-field>
-  <br><br>
-  <input type="file" (change)="fileChangeEvent($event)" placeholder="Upload file..." />
-  <br><br><button mat-raised-button id="main-button">Publicar</button>
-</form>
-</mat-card>
-
-
 <br><br>
-<publication-container-component></publication-container-component>

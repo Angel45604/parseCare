@@ -1,0 +1,446 @@
+@import url('https://fonts.googleapis.com/css?family=Gugi');
+@import url('https://fonts.googleapis.com/css?family=Berkshire+Swash');
+@import url('https://fonts.googleapis.com/css?family=Poiret+One');
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script|Rajdhani|Teko');
+*
+*
+/*letra del cuerpo*/
+{
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+}
+/*scroll barra contenedor*/
+body::-webkit-scrollbar {
+  width: 15px;
+}
+/*imagen del modal*/
+.ABC{
+    -webkit-box-shadow:  0px 15px 20px black;
+    -webkit-border-radius: 20%;
+    width: 210px;
+    height: 300px;
+}
+
+/*scroll barra*/
+body::-webkit-scrollbar-thumb {
+    background-color: rgba(69, 124, 144, 1);
+    width: 100%;
+}
+.div .d1{
+    border-radius: 50%;
+}
+#conteframe{
+    overflow: auto;
+    overflow-x: hidden;
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    position: absolute;
+    -webkit-box-orient: horizontal;
+}
+
+#conteframe .materialboxed{
+    width: 150px;
+    height: 89px;
+    float: left;
+   /* margin-left: 3vh;
+    margin-top: 3vh;*/
+    border-radius: 50%;
+    width: 120px;
+    height: 100px;
+}
+
+html, body, .bloco, .blocoP {
+  height: 100%;
+  
+}
+/* Class for when element is above threshold*/
+.pin-top {
+  position: relative;
+}
+
+/* Class for when element is below threshold*/
+.pin-bottom {
+  position: relative;
+}
+
+/*Class for when element is pinned*/
+.pinned {
+  position: fixed !important;
+}
+
+body {
+    color: rgba(0,0,0,0.87);
+    line-height: 1.6;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+}
+div {
+    display: block;
+}
+.algo{
+    position: fixed;
+    top:0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,.8);
+    z-index: 99999;
+    opacity: 0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+    
+}
+
+.algo:target{
+    opacity: 1;
+    pointer-events: auto;
+}
+.algo>div{
+    
+    width: 50%;
+    position: relative;
+    margin: 10% auto;
+    padding: 5px 20px 13px 20px;
+    border-radius: 15px;
+    background:rgba(234,230,202,.7);
+    line-height: 25px;
+    position: absolute;
+    right: -12px;
+    text-align: center;
+    top: -60px;
+    text-decoration: none;
+    font-weight: bold;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 12px;
+    -moz-box-shadow: 1px 1px 3px #000;
+    -webkit-box-shadow: 1px 1px 3px #000;
+    font-family: 'Source Sans Pro', sans-serif;
+    transform: translateX(-40%);
+    border-radius: 10%;
+}
+.algo>div::before{
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background:rgba(234,230,202,.7);
+    width: calc(100% + 4px);
+    height:  calc(100% + 4px);
+    background-size: 400%;
+    z-index: -1;
+    border-radius: 15px;
+    box-shadow: 0px 4px 5px black;
+}
+
+#tache{
+ float: right;
+}
+.close {
+ float: right;
+ margin:0;
+ padding: 0;
+ 
+}
+.close:hover{
+   
+    background: transparent;
+}
+
+
+
+.ABC{
+    -webkit-box-shadow:  0px 15px 20px black;
+    -webkit-border-radius: 20%;
+    padding:15px;
+}
+
+/*scroll barra*/
+body::-webkit-scrollbar-thumb {
+    background-color: rgba(69, 124, 144, 1);
+}
+
+section#banner{
+    width: 100%;
+    background-image: url(../Resourses/Images/fondos/FAdopta.jpg);
+    background-size: cover;
+    background-attachment: scroll;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+header{
+    position: fixed;
+    width: 100%;
+    height: 70px;
+    background-color: transparent;
+    -webkit-transition: background-color .5s;
+}
+nav{
+    display: table;
+    margin: auto;
+    margin-top: 15px;
+    -webkit-transition: margin-left .5s;
+}
+ul {
+    display: block;
+    float: left;
+    list-style: none;
+}
+ul a{
+    color:black;
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+ul li{
+    float: left;
+    margin: 10px;
+    padding: 2px;
+}
+img#logo{
+    float: left;
+    height: 300px;
+    width: 300px;
+    display: block;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 120px;
+    -webkit-transition: width.5s, height.5s, margin-right.5s, margin-top.5s;
+}
+.div .d1{
+    border-radius: 50%;
+}
+#conteframe{
+    overflow: auto;
+    overflow-x: hidden;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    -webkit-box-orient: horizontal;
+}
+/* :) */
+#conteframe img{
+    float: left;
+    margin-left: 3vh;
+    margin-top: 3vh;
+}
+
+p.textoOtro{
+  background-color: rgba(25, 153, 192, 0.582);
+  color:black;
+  border-radius:50px;
+  text-align:center;
+  border: 5px #000;
+}
+p.textoPerro{
+    background-color: rgba(231, 154, 31, 0.657);
+    color:black;
+    border-radius:50px;
+    text-align:center;
+    border: 5px #000;
+  }
+  p.textoGato{
+    background-color: rgba(231, 31, 148, 0.657);
+    color:black;
+    border-radius:50px;
+    text-align:center;
+    border: 5px #000;
+  }
+  p.textoPez{
+    background-color: rgba(8, 35, 185, 0.657);
+    color:black;
+    border-radius:50px;
+    text-align:center;
+    border: 5px #000;
+  }
+  p.textoAve{
+    background-color: rgba(144, 19, 202, 0.657);
+    color:black;
+    border-radius:50px;
+    text-align:center;
+    border: 5px #000;
+  }
+  p.textoConejo{
+    background-color: rgba(224, 16, 16, 0.76);
+    color:black;
+    border-radius:50px;
+    text-align:center;
+    border: 5px #000;
+  }
+a.brand-logo, a{
+  font-family:'Poiret One';
+}
+p.textoOtro:hover, p.textoPerro:hover,p.textoConejo:hover,p.textoPez:hover,p.textoGato:hover,p.textoAve:hover{
+  background-color: white;
+  text-align:center;
+  font-size: 80px;
+  font-family: 'Pacifico', cursive;
+}
+a.Nombre{
+    color: #000;
+    font-family: 'Pacifico', cursive;
+}
+.NombreM4{
+    margin: 0;
+    padding: 12px;
+    font-size: 35px;
+    font-family: 'Kaushan Script', cursive;
+    background-color:rgba(231,037,018,.8);
+    border-radius:50px;
+}
+.NombreM1{
+    margin: 0;
+    padding: 12px;
+    font-size: 35px;
+    font-family: 'Kaushan Script', cursive;
+    background-color:rgba(243, 154, 36, 0.8);
+    border-radius:50px;
+}
+.NombreM2{
+    margin: 0;
+    padding: 12px;
+    font-size: 35px;
+    font-family: 'Kaushan Script', cursive;
+    background-color:rgba(231, 18, 149, 0.8);
+    border-radius:50px;
+}
+.NombreM3{
+    margin: 0;
+    padding: 12px;
+    font-size: 35px;
+    font-family: 'Kaushan Script', cursive;
+    background-color:rgba(22, 18, 231, 0.8);
+    border-radius:50px;
+}
+.NombreM5{
+    margin: 0;
+    padding: 12px;
+    font-size: 35px;
+    font-family: 'Kaushan Script', cursive;
+    background-color:rgba(206, 18, 231, 0.8);
+    border-radius:50px;
+}
+.NombreM6{
+    margin: 0;
+    padding: 12px;
+    font-size: 35px;
+    font-family: 'Kaushan Script', cursive;
+    background-color:rgba(61, 231, 18, 0.8);
+    border-radius:50px;
+}
+
+p{
+  text-align: justify;
+  font-family: 'Rajdhani', sans-serif;
+  font-size:18px;
+ 
+  
+}
+.subti{
+font-family: 'Teko', sans-serif;
+font-size:22px;
+text-align: justify;
+font-weight: bold;
+}
+
+.ContienePerros{
+    margin-top: 15px;
+    width: 70%;
+    height: 100%; 
+    float: left; 
+    display: table;
+    background: rgba(212, 157, 37, 0.65);
+    border-radius: 8%;
+}
+.ContieneGatos{
+    margin-top: 15px;
+   width: 70%; 
+   height: 90%; 
+   float: left; 
+   display: table ;
+   border-radius: 8%;
+   background: rgba(235, 31, 167, 0.4);
+}
+.ContienePeces{
+    margin-top: 15px;
+    width: 70%;
+    height: 90%;
+    float: left; 
+    display: table;
+    border-radius: 8%;
+    background: rgba(48, 125, 167, 0.7);
+}
+.CotieneConejos{
+    margin-top: 15px;
+    width: 70%;
+    height: 90%;
+    float: left;
+    display: table;
+    border-radius: 8%;
+    background: rgba(245, 29, 31, 0.9);
+}
+.CotieneAve{
+    margin-top: 15px;
+   width: 70%;
+    height: 90%;
+    float: left;
+    display: table;
+    border-radius: 8%;
+    background: rgba(135, 53, 173, 0.87); 
+}
+.CotieneOtros{
+    margin-top: 15px;
+    width: 70%;
+    height: 90%;
+    float: left;
+    display: table;
+    border-radius: 8%;
+    background: rgba(148, 184, 17, 0.8); 
+}
+.blocoAves{
+    background-image: url(../Resourses/Images/fondos/seis.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.blocoGatos{
+    background-image: url(../Resourses/Images/fondos/tres.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;   
+}
+.blocoPeces{
+    background-image: url(../Resourses/Images/fondos/uno.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;   
+}
+.blocoPerros{
+    background-image: url(../Resourses/Images/fondos/dos.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;   
+}
+.blocoConejos{
+    background-image: url(../Resourses/Images/fondos/cuatro.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.blocoOtros{
+    background-image: url(../Resourses/Images/fondos/cinco.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;   
+}

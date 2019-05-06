@@ -1,0 +1,74 @@
+
+<header>
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" style="height: 50px;">
+          <a class="navbar-brand" href="#" style="margin-left: 1%;">ParseCare</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="/inicio">Comunidad <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#">Biblioteca</a>
+                </li>
+    
+              <li class="nav-item">
+                <a class="nav-link" href="/login">Iniciar Sesion!</a>
+              </li>
+    
+              <li class="nav-item">
+                <a class="nav-link" href="/registro">Registrate!</a>
+              </li>
+              
+              <li class="nav-item">
+                  <a class="nav-link" href="/soporte">Soporte Tecnico</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Conocenos!</a>
+                  </li>
+                
+            </ul>
+            <form class="form-inline mt-2 mt-md-0" style="margin-right: 1%;">
+              <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+          </div>
+        </nav>
+      </header>
+<br>
+<br>
+<div class="padre">
+    <br>
+<div class="mensaje" style="margin-left: 2%;">
+        <p class="titulo" style="margin-left: 2%;">PONTE EN CONTACTO CON NOSOTROS</p><br>
+        <p style="margin-left: 2%;"> Queja <input type="radio" name="radio" value="Queja"> Sugerencia <input type="radio" name="radio" value="Sugerencia"> Duda <input type="radio" name="radio" value="Duda"></p><br>
+        <form action="/JPS/EnvioEmail.jsp" method="post">
+            <br>
+            <input type="email" class="texto" id="correo" name="de" placeholder="Correo electrónico" 
+                   onfocus = " return disbaleCopyPaste(elm)" 
+                   autocomplete="off" 
+                   onkeypress="nojaks(this)"
+                   onkeydown = "return interceptKeys(event)"
+                   required>
+            <input type="password" class="texto" id="contra" name="contra" placeholder="Contraseña"
+                   onfocus = " return disbaleCopyPaste(elm)" 
+                   autocomplete="off" 
+                   onkeypress="nojaks(this)"
+                   onkeydown = "return interceptKeys(event)"
+                   required><br><br>
+            <textarea id="texto" name="contenido" placeholder="Deja aquí tu mensaje" class="alabasura" required></textarea>
+            <input type="submit" id="Enviar" value="Enviar" name="Enviar"><br>
+            <p class="notas">*La contraseña debe coincidir con la contraseña del correo electrónico propocionado anteriormente</p>
+            <p class="notas">Los datos proporcionados serán enviados al administrador de la página con el fin de contribuir al desarrollo de la misma, cualquier dato proporcionado será únicamente visible para el administrador.*</p>
+        </form>
+    </div>
+    
+    <div class="comentario">
+        <div class="fb-comments" data-href="http://localhost:8084/Quejas/Quejas.html" data-width="600" data-numposts="5"></div>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    
+</div>
+<br>

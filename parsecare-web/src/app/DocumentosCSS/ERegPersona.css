@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css?family=Kirang+Haerang');
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins';
+    font-size: 13px;
+}
+
+.contenedor{
+    background: rgba(63,191,191,0.6); 
+    box-shadow: 1px 1px 10px 0px black;
+    padding: 20px;
+    height: 80vh; 
+    width: 60vw;
+    margin: auto;
+    margin-top: 7vh;
+}
+body{
+    background-image: url("../Resourses/Images/fondos/FRegistroPersona.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.titulo{
+    font-family: 'Kirang Haerang';
+    color: white;
+    text-shadow: 1px 1px 10px black;
+    font-size: 8em;
+}
+.boton{
+    color:#fff;
+    background: #cc0066;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 1px 1px 10px 0px black;
+    font-size: 1.3em;
+    width: 13vw;
+    height: 6vh;
+    border-radius: 15px;
+    transition: .5s;
+    cursor: pointer;
+    border: 2px solid rgba(162, 0, 44,0.7);
+}
+.boton:hover{
+    -webkit-transform: scale(0.95);
+    background: #ff9900;
+    border: 3px solid #ff9900;
+    
+}
+.contenedor [type="text"]{
+    height:6.5vh;
+    border-radius: 5px;
+    -webkit-text-transform: uppercase;
+    border: 2px solid rgba(162, 0, 44,0.7);
+    outline: none;
+}
+.contenedor [type="password"]{
+    height:6.5vh;
+    border-radius: 5px;
+    border: 2px solid rgba(162, 0, 44,0.7);
+    outline: none;
+}
+.contenedor [type="email"]{
+    height:6.5vh;
+    border-radius: 5px;
+    border: 2px solid rgba(162, 0, 44,0.7);
+    outline: none;
+}
+select{
+    height:6.5vh;
+    border-radius: 5px;
+    border: 2px solid rgba(162, 0, 44,0.7);
+    outline: none;
+}
+select:hover{
+    border: 3px solid #ff9900;
+}
+.contenedor [type="password"]:hover{
+    border: 3px solid #ff9900;
+}
+.contenedor [type="text"]:hover{
+    border: 3px solid #ff9900;
+}
+.contenedor [type="email"]:hover{
+    border: 3px solid #ff9900;
+}
+#noms{
+    width:17vw; 
+}
+#appat{
+    width:17vw; 
+}
+#apmat{
+    width:17vw; 
+}
+#nina{
+    width:17vw; 
+}
+#con{
+    width:17vw; 
+}
+#concom{
+    width:17vw; 
+}
+#cel{
+    width:17vw; 
+}
+#correo{
+    width:34vw; 
+}
+#delegacion{
+    width:20vw; 
+}
+#colonia{
+    width:20vw; 
+}
+#contenedor_carga{
+    background-color: #333333;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top:0;
+    left:0;
+    -webkit-transition: all 2s ease;
+    -o-transition: all 2s ease;
+    transition: all 2s ease;
+    z-index: 10000;
+
+}
+#contereal{
+    
+
+    height: 100px;
+    width: 100px;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    
+}
+#preloader_1{
+    position:relative;
+
+}
+#preloader_1 span{
+    display:block;
+    bottom:0px;
+    width: 20px;
+    height: 5px;
+    background:#9b59b6;
+    position:absolute;
+    -webkit-animation: preloader_1 1.5s  infinite ease-in-out;
+}
+ 
+#preloader_1 span:nth-child(2){
+left:30px;
+-webkit-animation-delay: .2s;
+ 
+}
+#preloader_1 span:nth-child(3){
+left:60px;
+-webkit-animation-delay: .4s;
+}
+#preloader_1 span:nth-child(4){
+left:90px;
+-webkit-animation-delay: .6s;
+}
+#preloader_1 span:nth-child(5){
+left:120px;
+-webkit-animation-delay: .8s;
+}
+@keyframes preloader_1 {
+    0% {height:5px;
+        -webkit-transform:translateY(0px);background:#9b59b6;}
+    25% {height:70px;
+         -webkit-transform:translateY(35px);background:#3498db;}
+    50% {height:5px;
+         -webkit-transform:translateY(0px);background:#9b59b6;}
+    100% {height:5px;
+          -webkit-transform:translateY(0px);background:#9b59b6;}
+} 
+
+
+
+

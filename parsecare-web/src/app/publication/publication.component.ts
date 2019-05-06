@@ -32,7 +32,7 @@ export class PublicationComponent implements OnInit, OnChanges {
           alert('Comentario comentado');
         }, err => {
           console.error(err)
-          
+          alert('Necesitas Iniciar Sesion :c');
         });
     }
   ngOnInit() {

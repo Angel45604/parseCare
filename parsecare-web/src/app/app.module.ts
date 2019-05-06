@@ -39,6 +39,8 @@ import {LoginComponent} from "./login/login.component";
 import {RouterModule, Routes} from "@angular/router";
 import {InitComponent} from "./init.component";
 import {RegistroComponent} from "./registro/registro.component";
+import {InicioComponent} from "./Inicio/inicio.component";
+import {SoporteComponent} from "./soporte/soporte.component";
 
 import {environment} from "../environments/environment";
 import {AngularFireModule} from "@angular/fire";
@@ -47,7 +49,9 @@ import {AngularFireStorageModule, StorageBucket} from '@angular/fire/storage';
 const appRoutes: Routes = [
   {path: '', component: AppComponent },
   {path: 'login', component: LoginComponent},
-  {path: 'registro', component: RegistroComponent}
+  {path: 'registro', component: RegistroComponent},
+  {path: 'inicio', component: InicioComponent},
+  {path: 'soporte', component: SoporteComponent}
 ]
 
 @NgModule({
@@ -59,7 +63,9 @@ const appRoutes: Routes = [
     CommentContainerComponent,
     LoginComponent,
     InitComponent,
-    RegistroComponent
+    RegistroComponent,
+    InicioComponent,
+    SoporteComponent
     //MenubarComponent
   ],
   imports: [
