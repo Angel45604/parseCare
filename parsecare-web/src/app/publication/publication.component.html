@@ -1,40 +1,38 @@
-<mat-card class="example-card">
-  <mat-card-header>
-    <div mat-card-avatar class="example-header-image"></div>
-    <mat-card-title>{{publication.user.nickname}}</mat-card-title>
-    <mat-card-subtitle>Un perro no tiene nada que ver con un pez .-.</mat-card-subtitle>
-  </mat-card-header>
-  <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
-  <mat-card-content>
-    <p>
-      Bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla.<br>
-      A bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla.
-      bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
-      
-    </p>
-  </mat-card-content>
-  <mat-card-actions>
-    <button mat-button>LIKE</button>
-    <button mat-button>SHARE</button>
-  </mat-card-actions>
-</mat-card>
+<div style="height: 100%; width: 100;">
+
 <br><br>
 
 <mat-card class="example-card">
-    <mat-card-header>
+    <mat-card-header style="margin-left: 2%;">
       <div mat-card-avatar class="example-header-image"></div>
+      
       <mat-card-title>{{publication.user.nickname}}</mat-card-title>
-      <mat-card-subtitle>{{publication.topic}}</mat-card-subtitle>
+      <mat-card-subtitle><h6>{{publication.topic}}</h6></mat-card-subtitle>
+      <br>
     </mat-card-header>
-    <img width="200px" height="200px" src="{{publication.archivo}}" alt="">
+    
+    <img width="91%px" height="200px" style="margin-left: 4%;" src="{{publication.archivo}}" alt="">
     <mat-card-content>
-      <p>
+      <br>
+      <p style="margin-left: 4%; width: 90%; height: 30%;">
           {{publication.contenido}}
       </p>
+      <div class="modal-header">
+          <h6 style="color:white; margin-left: 7%;"></h6>
+          <br>
+      </div>
+      <br>
       
-<comment-container-component comments="{{publication.comments | json}}"></comment-container-component>
+      <input type="checkbox"  id="spoiler2" /> 
+  <label for="spoiler2" >Comentarios</label>
+<div class="spoiler">
+    <comment-container-component style="margin-left: 4%;" comments="{{publication.comments | json}}"></comment-container-component>
+</div>
+<p style="text-align:center;">Da click para ver todos los comentarios ;)</p>
+
+
 <br>
-<form (ngSubmit)="submitComment()">
+<form (ngSubmit)="submitComment()" style="margin-left: 4%">
   <mat-form-field>
     <input name="comentario" [(ngModel)]="comentario.comentario" matInput placeholder="Escribe un comentario">
   </mat-form-field>
@@ -42,11 +40,11 @@
     <br><br>
 </form>
     </mat-card-content>
-    <mat-card-actions>
+    <mat-card-actions style="margin-left: 4%">
       <button mat-button>LIKE</button>
       <button mat-button>SHARE</button>
     </mat-card-actions>
   </mat-card>
   <br><br>
-
+</div>
 

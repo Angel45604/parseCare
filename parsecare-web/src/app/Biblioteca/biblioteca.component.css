@@ -1,0 +1,192 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.inicio{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: #000000;
+}
+#boton{
+    color: white;
+    font-family: 'Kirang Haerang';
+    width: 15%;
+    height: 10%;
+    position: absolute;
+    z-index: 100;
+    margin-left: 42.5%;
+    margin-top: 22.5%;
+    font-size: 20px;
+    background-color: #ff00ff;
+    border-color: black;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+
+#cabecera{
+    width: 100%;
+    height: 50px;
+    background-color: #32b6ff;
+    margin-top: 0px;
+    box-shadow: 1px 1px 10px 0px black;
+    position: fixed, absolute;
+}
+
+#menu{
+    margin-top:07%;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    -webkit-perspective: 200px;
+    color: white;
+}
+
+#menu ul{
+    display: flex;
+    margin: auto;
+}
+
+#menu li{
+    list-style: none;
+    padding: 15px;
+    text-decoration: none;
+    
+}
+
+#menu li:hover{
+    background: rgba(0, 0, 0, 0.3);
+    color: white;
+    transition: all 300ms;
+    cursor: pointer;
+}
+
+#menu ul li ul{
+    flex-direction: column;
+    position: absolute;
+    /*ROSA*/
+    background: #ff3366;
+    margin-top: 15px;
+    -webkit-transform: rotateY(240deg) scale(0);
+    -webkit-transition: all 1s;
+    box-shadow: 1px 1px 10px 0px black;
+}
+
+#menu ul li:hover > ul{
+    -webkit-transform: rotateY(0deg) scale(1);
+    -webkit-transition: all 1s;
+}
+
+#menu ul li ul:before{
+    content: '';
+    width: 0;
+    height: 0;
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+    border-bottom: 8px solid #ff3366;
+    position: absolute;
+    margin-top: -8px;
+    margin-left: 20px;
+}
+
+#menu ul li ul li ul li{
+    position: relative;
+}
+
+#menu ul li ul li ul{
+    right: -110px;
+    top: 40px;
+    /*AMARILLO*/
+    background: #ffcc00;
+}
+
+#menu ul li ul li ul:before{
+    position: absolute;
+    border-bottom: 8px solid #ffcc00;
+    margin-top: 18px;
+    margin-left: -14px;
+    -webkit-transform: rotate(-90deg);
+}
+
+.logo{
+    position: absolute;
+    width: 30vh;
+    height: 30vh;
+    margin-left: 43%;
+    margin-top: -120px;
+    
+}
+
+.tit{
+    position: absolute;
+    margin-top: 15px;
+    margin-left: 41.3%;
+    color: white;
+    font-family: 'Kirang Haerang';
+    font-size: 4em;
+    
+    text-shadow: 0px 0px 20px #333333; 
+}
+
+.logo:hover{
+    -webkit-transform: rotate(1turn);
+    -webkit-transition: all 1s;
+    
+}
+#loguito{
+    position: absolute;
+    width: 400px;
+    height: 400px;
+margin: auto;
+    -webkit-animation: rotachido 2s infinite linear;
+}
+@keyframes rotachido {
+    from{height:400px;width: 400px;
+        }
+  to {
+    transform: rotate(2turn); height:1px;width:1px;
+  margin-top:20%;
+  margin-left:40%;} 
+
+  }
+
+  
+  
+  input[id^="spoiler"]{
+    display: none;
+   }
+   input[id^="spoiler"] + label {
+     display: block;
+     width: 200px;
+     margin: 0 auto;
+     padding: 5px 20px;
+     background: #e1a;
+     color: #fff;
+     text-align: center;
+     font-size: 24px;
+     border-radius: 8px;
+     cursor: pointer;
+     transition: all .6s;
+   }
+   input[id^="spoiler"]:checked + label {
+     color: #333;
+     background: #EBF5FB;
+   }
+   input[id^="spoiler"] ~ .spoiler {
+     width: 90%;
+     height: 0;
+     overflow: hidden;
+     margin: 10px auto 0; 
+     padding: 10px; 
+     border-radius: 8px;
+     transition: all .6s;
+   }
+   input[id^="spoiler"]:checked + label + .spoiler{
+     height: auto;
+     padding: 10px;
+   }

@@ -1,2 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~@angular/material/prebuilt-themes/pink-bluegrey.css";
+body{
+
+    /*
+    background: rgba(12,215,230,1);
+background: -moz-linear-gradient(-45deg, rgba(12,215,230,1) 0%, rgba(12,215,230,1) 4%, rgba(27,76,222,1) 91%, rgba(27,76,222,1) 100%);
+background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(12,215,230,1)), color-stop(4%, rgba(12,215,230,1)), color-stop(91%, rgba(27,76,222,1)), color-stop(100%, rgba(27,76,222,1)));
+background: -webkit-linear-gradient(-45deg, rgba(12,215,230,1) 0%, rgba(12,215,230,1) 4%, rgba(27,76,222,1) 91%, rgba(27,76,222,1) 100%);
+background: -o-linear-gradient(-45deg, rgba(12,215,230,1) 0%, rgba(12,215,230,1) 4%, rgba(27,76,222,1) 91%, rgba(27,76,222,1) 100%);
+background: -ms-linear-gradient(-45deg, rgba(12,215,230,1) 0%, rgba(12,215,230,1) 4%, rgba(27,76,222,1) 91%, rgba(27,76,222,1) 100%);
+background: linear-gradient(135deg, rgba(12,215,230,1) 0%, rgba(12,215,230,1) 4%, rgba(27,76,222,1) 91%, rgba(27,76,222,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0cd7e6', endColorstr='#1b4cde', GradientType=1 );
+*/
+}
+.todo{
+    background-image: url(https://firebasestorage.googleapis.com/v0/b/parsecare.appspot.com/o/pictures%2F1557190698224.jpg?alt=media&token=70715753-5f7b-4ff1-a295-82057d1fe869);
+    background-size: cover;
+    background-attachment: scroll;
+    background-position: center;
+    background-repeat: no-repeat;
+}

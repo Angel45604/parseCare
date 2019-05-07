@@ -1,23 +1,80 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
-<mat-card id="main-card">
-  <div id="main-div">
-    <h1>Login</h1>
-    <br><br>
-    <mat-icon>group</mat-icon>
-    <br><br>
-    <form (ngSubmit)="login()" action="http://localhost:4200/">
-      <mat-form-field hintLabel="Max 10 characters">
-        <input name="usuario" [(ngModel)]="usuario.correo" matInput placeholder="Correo">
-      </mat-form-field>
-      <br><br>
-      <mat-form-field>
-        <input name="contrasena" [(ngModel)]="usuario.password" matInput placeholder="Contraseña" type="password">
-      </mat-form-field>
-      <br><br>
-      No tienes una cuenta? <a href="http://localhost:4200/registro" target="_self">Registrate!</a>
-      <br><br>
-      <button mat-raised-button id="main-button">Iniciar Sesion</button>
-    </form>
-    <br><br>
-  </div>
-</mat-card>
+
+<html>
+     <head>
+        <title>Inicia Sesion</title>
+        <link rel="shortcut icon" type="image/png" href="../Resourses/Images/logoPP.png"/>
+        <meta charset="ISO-8859-1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <script type="text/javascript">
+            function disbaleCopyPaste(elm){
+                // Deshabilitar los eventos cut/copy/paste
+                elm.onkeydown = interceptKeys
+                elm.oncontextmenu = function(){
+                        return false
+                }
+                    }
+
+            function interceptKeys(evt) {
+                evt = evt||window.event // IE support
+                var c = evt.keyCode
+                var ctrlDown = evt.ctrlKey||evt.metaKey // Mac
+                if (ctrlDown && evt.altKey) return true
+                // Verifica los ctrl + c, v y x
+                else if (ctrlDown && c==67) return false // c
+                else if (ctrlDown && c==86) return false // v
+                else if (ctrlDown && c==88) return false // x
+
+                return true
+            }
+
+        </script>
+         <script Language="JavaScript">
+            
+            function atras(){
+                window.location.hash="no-back-button";
+                window.location.hash="Again-No-back-button" //chrome
+                window.onhashchange=function(){window.location.hash="no-back-button";}
+            }
+        
+    </script>   
+        
+        
+     </head>
+     
+    <body >
+      <div class="all">
+        <section class="all">
+        <div class="titulo" style="margin-left: 43%;"><h1>INICIA SESIÓN</h1></div>
+        <div class="container">
+          
+            <div class="form_content"><div class="Ima"></div></div>
+            <div class="login_form">
+                <div class="ingresar"><h1 align="center">Ingresar</h1></div>
+              <div id="main-div">
+                
+                  <mat-icon>group</mat-icon>
+                  <br>
+                  <form (ngSubmit)="login()" action="http://localhost:4200/">
+                    <mat-form-field hintLabel="Max 10 characters">
+                      <input name="usuario" [(ngModel)]="usuario.correo" matInput placeholder="Correo">
+                    </mat-form-field>
+                    <br>
+                    <mat-form-field>
+                      <input name="contrasena" [(ngModel)]="usuario.password" matInput placeholder="Contraseña" type="password">
+                    </mat-form-field>
+                    <br>
+                    No tienes una cuenta? <a href="http://localhost:4200/registro">Registrate!</a>
+                    <br><br>
+                    <button mat-raised-button id="main-button">Iniciar Sesion</button>
+                  </form>
+                  <a href="/">Home</a>
+                </div>
+                
+        </div>
+       </div>
+        </section>
+      </div>
+     </body>
+</html>

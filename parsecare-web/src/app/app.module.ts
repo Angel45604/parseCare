@@ -41,6 +41,9 @@ import {InitComponent} from "./init.component";
 import {RegistroComponent} from "./registro/registro.component";
 import {InicioComponent} from "./Inicio/inicio.component";
 import {SoporteComponent} from "./soporte/soporte.component";
+import {BibliotecaComponent} from "./Biblioteca/biblioteca.component";
+import {ConsejosComponent} from "./Consejos/consejos.component";
+import {CulturaComponent} from "./Cultura/cultura.component";
 
 import {environment} from "../environments/environment";
 import {AngularFireModule} from "@angular/fire";
@@ -51,7 +54,10 @@ const appRoutes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'registro', component: RegistroComponent},
   {path: 'inicio', component: InicioComponent},
-  {path: 'soporte', component: SoporteComponent}
+  {path: 'soporte', component: SoporteComponent},
+  {path: 'biblioteca', component: BibliotecaComponent},
+  {path: 'consejos', component: ConsejosComponent},
+  {path: 'cultura', component: CulturaComponent}
 ]
 
 @NgModule({
@@ -65,7 +71,10 @@ const appRoutes: Routes = [
     InitComponent,
     RegistroComponent,
     InicioComponent,
-    SoporteComponent
+    SoporteComponent,
+    BibliotecaComponent,
+    ConsejosComponent,
+    CulturaComponent
     //MenubarComponent
   ],
   imports: [
