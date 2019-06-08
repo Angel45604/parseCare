@@ -3,26 +3,57 @@
   <h1>Registro</h1>
   <br><br>
   <form (ngSubmit)="submitRegistro()">
-    <mat-form-field hintLabel="Max 10 characters">
-      <input name="usuario" [(ngModel)]="usuario.correo" matInput #input maxlength="10" placeholder="Correo">
+    <mat-form-field >
+
+      <input name="correo" matInput placeholder="Email" [(ngModel)]="usuario.correo" [formControl]="emailFormControl"
+           [errorStateMatcher]="matcher">
+    <mat-hint>Errors appear instantly!</mat-hint>
+    <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+      Please enter a valid email address
+    </mat-error>
     </mat-form-field><br><br>
     <br><br>
+
     <mat-form-field>
-      <input name="password" [(ngModel)]="usuario.password" matInput placeholder="Contraseña" type="password">
+      <input name="password" [(ngModel)]="usuario.password" matInput placeholder="Contraseña" type="password" [formControl]="passwordFormControl"
+      [errorStateMatcher]="matcher">
+      <mat-hint>Errors appear instantly!</mat-hint>
+    
+    <mat-error *ngIf="passwordFormControl.hasError('required')">
+      Email is <strong>required</strong>
+    </mat-error>
     </mat-form-field>
+
     <br><br>
     <mat-form-field>
-      <input name="nickname" [(ngModel)]="usuario.nickname" matInput placeholder="Nnickname" type="text">
+      <input name="nickname" [(ngModel)]="usuario.nickname" matInput placeholder="Nnickname" type="text" [formControl]="nicknameFormControl"
+      [errorStateMatcher]="matcher">
+      <mat-hint>Errors appear instantly!</mat-hint>
+    <mat-error *ngIf="nicknameFormControl.hasError('required')">
+      Email is <strong>required</strong>
+    </mat-error>
     </mat-form-field>
+
     <br><br>
     <mat-form-field>
-      <input name="nombre" [(ngModel)]="usuario.nombre" matInput placeholder="Nombre" type="text">
+      <input name="nombre" [(ngModel)]="usuario.nombre" matInput placeholder="Nombre" type="text" [formControl]="nombreFormControl"
+      [errorStateMatcher]="matcher">
+      <mat-hint>Errors appear instantly!</mat-hint>
+    <mat-error *ngIf="nombreFormControl.hasError('required')">
+      Email is <strong>required</strong>
+    </mat-error>
     </mat-form-field>
+
     <br><br>
     <mat-form-field>
-      <input name="apellidos" [(ngModel)]="usuario.apellidos" matInput placeholder="Apellidos" type="text">
+      <input name="apellidos" [(ngModel)]="usuario.apellidos" matInput placeholder="Apellidos" type="text" [formControl]="apellidosFormControl"
+      [errorStateMatcher]="matcher">
+      <mat-hint>Errors appear instantly!</mat-hint>
+    <mat-error *ngIf="apellidosFormControl.hasError('required')">
+      Email is <strong>required</strong>
+    </mat-error>
     </mat-form-field>
     <br><br>
-    <br><br><button mat-raised-button id="main-button">Registrarse</button>
+    <br><br><button mat-raised-button id="main-button" [disabled]="emailFormControl.invalid || nombreFormControl.invalid">Registrarse</button>
   </form>
 </mat-card>

@@ -154,39 +154,41 @@ margin: auto;
   margin-left:40%;} 
 
   }
+.modal-content {
+    background: rgba(232,105,126,1);
+    background: -moz-linear-gradient(45deg, rgba(232,105,126,1) 0%, rgba(232,105,126,1) 2%, rgba(240,53,106,1) 43%, rgba(186,0,62,1) 100%);
+    background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(232,105,126,1)), color-stop(2%, rgba(232,105,126,1)), color-stop(43%, rgba(240,53,106,1)), color-stop(100%, rgba(186,0,62,1)));
+    background: -webkit-linear-gradient(45deg, rgba(232,105,126,1) 0%, rgba(232,105,126,1) 2%, rgba(240,53,106,1) 43%, rgba(186,0,62,1) 100%);
+    background: -o-linear-gradient(45deg, rgba(232,105,126,1) 0%, rgba(232,105,126,1) 2%, rgba(240,53,106,1) 43%, rgba(186,0,62,1) 100%);
+    background: -ms-linear-gradient(45deg, rgba(232,105,126,1) 0%, rgba(232,105,126,1) 2%, rgba(240,53,106,1) 43%, rgba(186,0,62,1) 100%);
+    background: linear-gradient(45deg, rgba(232,105,126,1) 0%, rgba(232,105,126,1) 2%, rgba(240,53,106,1) 43%, rgba(186,0,62,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e8697e', endColorstr='#ba003e', GradientType=1 );
+    
+}
+textarea{
+    border: none;
+    
+    -webkit-box-shadow: 7px 10px 15px -2px rgba(0,0,0,0.75);
+-moz-box-shadow: 7px 10px 15px -2px rgba(0,0,0,0.75);
+box-shadow: 7px 10px 15px -2px rgba(0,0,0,0.75);
 
-  
-  
-  input[id^="spoiler"]{
-    display: none;
-   }
-   input[id^="spoiler"] + label {
-     display: block;
-     width: 200px;
-     margin: 0 auto;
-     padding: 5px 20px;
-     background: #e1a;
-     color: #fff;
-     text-align: center;
-     font-size: 24px;
-     border-radius: 8px;
-     cursor: pointer;
-     transition: all .6s;
-   }
-   input[id^="spoiler"]:checked + label {
-     color: #333;
-     background: #EBF5FB;
-   }
-   input[id^="spoiler"] ~ .spoiler {
-     width: 90%;
-     height: 0;
-     overflow: hidden;
-     margin: 10px auto 0; 
-     padding: 10px; 
-     border-radius: 8px;
-     transition: all .6s;
-   }
-   input[id^="spoiler"]:checked + label + .spoiler{
-     height: auto;
-     padding: 10px;
-   }
+background: rgba(242,48,97,1);
+background: -moz-linear-gradient(left, rgba(242,48,97,1) 0%, rgba(222,37,90,1) 33%, rgba(194,4,51,1) 91%, rgba(194,4,51,1) 100%);
+background: -webkit-gradient(left top, right top, color-stop(0%, rgba(242,48,97,1)), color-stop(33%, rgba(222,37,90,1)), color-stop(91%, rgba(194,4,51,1)), color-stop(100%, rgba(194,4,51,1)));
+background: -webkit-linear-gradient(left, rgba(242,48,97,1) 0%, rgba(222,37,90,1) 33%, rgba(194,4,51,1) 91%, rgba(194,4,51,1) 100%);
+background: -o-linear-gradient(left, rgba(242,48,97,1) 0%, rgba(222,37,90,1) 33%, rgba(194,4,51,1) 91%, rgba(194,4,51,1) 100%);
+background: -ms-linear-gradient(left, rgba(242,48,97,1) 0%, rgba(222,37,90,1) 33%, rgba(194,4,51,1) 91%, rgba(194,4,51,1) 100%);
+background: linear-gradient(to right, rgba(242,48,97,1) 0%, rgba(222,37,90,1) 33%, rgba(194,4,51,1) 91%, rgba(194,4,51,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f23061', endColorstr='#c20433', GradientType=1 );
+
+}
+.pie{
+    background: rgba(70,122,135,1);
+background: -moz-linear-gradient(left, rgba(70,122,135,1) 0%, rgba(41,96,110,1) 32%, rgba(5,41,51,1) 89%, rgba(5,41,51,1) 100%);
+background: -webkit-gradient(left top, right top, color-stop(0%, rgba(70,122,135,1)), color-stop(32%, rgba(41,96,110,1)), color-stop(89%, rgba(5,41,51,1)), color-stop(100%, rgba(5,41,51,1)));
+background: -webkit-linear-gradient(left, rgba(70,122,135,1) 0%, rgba(41,96,110,1) 32%, rgba(5,41,51,1) 89%, rgba(5,41,51,1) 100%);
+background: -o-linear-gradient(left, rgba(70,122,135,1) 0%, rgba(41,96,110,1) 32%, rgba(5,41,51,1) 89%, rgba(5,41,51,1) 100%);
+background: -ms-linear-gradient(left, rgba(70,122,135,1) 0%, rgba(41,96,110,1) 32%, rgba(5,41,51,1) 89%, rgba(5,41,51,1) 100%);
+background: linear-gradient(to right, rgba(70,122,135,1) 0%, rgba(41,96,110,1) 32%, rgba(5,41,51,1) 89%, rgba(5,41,51,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#467a87', endColorstr='#052933', GradientType=1 );
+}

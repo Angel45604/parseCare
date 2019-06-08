@@ -56,7 +56,7 @@ export class InicioComponent implements OnInit {
           .subscribe(res => {
             console.log(res);
             alert('Publicacion publicada');
-            this.router.navigate(['/']);
+            this.router.navigate(['/inicio']);
           }, err => {
             console.error(err);
           });

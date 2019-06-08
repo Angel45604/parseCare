@@ -191,4 +191,7 @@ margin: auto;
   margin-left:40%;} 
 
   }
-
+  
+  #navbarCollapse{
+    height: 40%;
+  }

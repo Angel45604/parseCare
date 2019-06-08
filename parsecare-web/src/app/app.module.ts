@@ -48,6 +48,7 @@ import {CulturaComponent} from "./Cultura/cultura.component";
 import {environment} from "../environments/environment";
 import {AngularFireModule} from "@angular/fire";
 import {AngularFireStorageModule, StorageBucket} from '@angular/fire/storage';
+import { ReactiveFormsModule } from '@angular/forms';
 
 const appRoutes: Routes = [
   {path: '', component: AppComponent },
@@ -81,6 +82,7 @@ const appRoutes: Routes = [
     BrowserModule,
     FormsModule,
     HttpModule,
+    ReactiveFormsModule,
     HttpClientModule,
     //Angular Material
     MaterialModule,

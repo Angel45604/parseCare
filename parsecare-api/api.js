@@ -172,7 +172,7 @@ api.post('/publication', async (req, res, next) => {
             debug('USUARIO', usr)
             usr.createPublicacione(req.body).then(pub => {
                 debug('PUBLICACION', pub)
-                res.send(publicacion)
+                res.send(publication)
             })
         })
     } catch(e) {
@@ -193,10 +193,7 @@ api.post('/comment', async (req, res, next) => {
             usr.createComment(req.body).then(com => {
                 debug('COMENTARIO', com)
                 Publication.findById(req.body.publicationId).then(pub => {
-                    pub.createComment(req.body).then(comm => {
-                        debug('COMENTARIO', comm)
-                        res.send(comment)
-                    })
+                    
                 })
             })
         })
